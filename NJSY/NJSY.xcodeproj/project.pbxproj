@@ -8,19 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		17A84162E64155CFD8B410FF /* Pods_NJSY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F20A5EC22CCB137E67ADD359 /* Pods_NJSY.framework */; };
-		A9257E901F1E4D0C00F3F4C1 /* UserDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9257E8F1F1E4D0C00F3F4C1 /* UserDao.swift */; };
-		A9257E931F1E5DF100F3F4C1 /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9257E921F1E5DF100F3F4C1 /* UserVO.swift */; };
+		2E7694DE1F20AF6D007E5157 /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694DD1F20AF6D007E5157 /* UserVO.swift */; };
+		2E7694E01F20AF77007E5157 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E7694DF1F20AF77007E5157 /* Main.storyboard */; };
+		2E7694E21F20AF83007E5157 /* UserDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694E11F20AF83007E5157 /* UserDao.swift */; };
+		2E7694E51F20AF92007E5157 /* RoomPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694E31F20AF92007E5157 /* RoomPO.swift */; };
+		2E7694E61F20AF92007E5157 /* UserPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694E41F20AF92007E5157 /* UserPO.swift */; };
+		2E7694E81F20AF9B007E5157 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694E71F20AF9B007E5157 /* UserService.swift */; };
+		2E7694EA1F20AFA5007E5157 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694E91F20AFA5007E5157 /* LoginViewController.swift */; };
 		A95AE6BF1F1BA6E800590E99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6BE1F1BA6E800590E99 /* AppDelegate.swift */; };
 		A95AE6C51F1BA6E800590E99 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6C41F1BA6E800590E99 /* GameScene.swift */; };
-		A95AE6C71F1BA6E800590E99 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6C61F1BA6E800590E99 /* LoginViewController.swift */; };
-		A95AE6CA1F1BA6E800590E99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A95AE6C81F1BA6E800590E99 /* Main.storyboard */; };
 		A95AE6CC1F1BA6E800590E99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95AE6CB1F1BA6E800590E99 /* Assets.xcassets */; };
-		A95AE6CF1F1BA6E800590E99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A95AE6CD1F1BA6E800590E99 /* LaunchScreen.storyboard */; };
 		A95AE6DA1F1BA6E800590E99 /* NJSYTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6D91F1BA6E800590E99 /* NJSYTests.swift */; };
 		A95AE6E51F1BA6E800590E99 /* NJSYUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6E41F1BA6E800590E99 /* NJSYUITests.swift */; };
 		A95AE6F31F1BA7B400590E99 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A95AE6F21F1BA7B400590E99 /* Podfile */; };
-		A95AE6F91F1CBCCE00590E99 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6F81F1CBCCE00590E99 /* UserService.swift */; };
-		A95AE6FB1F1CBD2A00590E99 /* UserPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6FA1F1CBD2A00590E99 /* UserPO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,16 +42,18 @@
 
 /* Begin PBXFileReference section */
 		0AFEC174849FA67C7FCB3B5B /* Pods-NJSY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJSY.release.xcconfig"; path = "Pods/Target Support Files/Pods-NJSY/Pods-NJSY.release.xcconfig"; sourceTree = "<group>"; };
+		2E7694DD1F20AF6D007E5157 /* UserVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserVO.swift; path = Base.lproj/vo/UserVO.swift; sourceTree = "<group>"; };
+		2E7694DF1F20AF77007E5157 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/view/Main.storyboard; sourceTree = "<group>"; };
+		2E7694E11F20AF83007E5157 /* UserDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDao.swift; path = Base.lproj/dao/UserDao.swift; sourceTree = "<group>"; };
+		2E7694E31F20AF92007E5157 /* RoomPO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomPO.swift; path = Base.lproj/po/RoomPO.swift; sourceTree = "<group>"; };
+		2E7694E41F20AF92007E5157 /* UserPO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserPO.swift; path = Base.lproj/po/UserPO.swift; sourceTree = "<group>"; };
+		2E7694E71F20AF9B007E5157 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = Base.lproj/service/UserService.swift; sourceTree = "<group>"; };
+		2E7694E91F20AFA5007E5157 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Base.lproj/controller/LoginViewController.swift; sourceTree = "<group>"; };
 		96DFE8D3F0C5FCA9D4EBDE86 /* Pods-NJSY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJSY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NJSY/Pods-NJSY.debug.xcconfig"; sourceTree = "<group>"; };
-		A9257E8F1F1E4D0C00F3F4C1 /* UserDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDao.swift; sourceTree = "<group>"; };
-		A9257E921F1E5DF100F3F4C1 /* UserVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVO.swift; sourceTree = "<group>"; };
 		A95AE6BB1F1BA6E800590E99 /* NJSY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NJSY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95AE6BE1F1BA6E800590E99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A95AE6C41F1BA6E800590E99 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		A95AE6C61F1BA6E800590E99 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		A95AE6C91F1BA6E800590E99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A95AE6CB1F1BA6E800590E99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A95AE6CE1F1BA6E800590E99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A95AE6D01F1BA6E800590E99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A95AE6D51F1BA6E800590E99 /* NJSYTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NJSYTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95AE6D91F1BA6E800590E99 /* NJSYTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NJSYTests.swift; sourceTree = "<group>"; };
@@ -60,8 +62,6 @@
 		A95AE6E41F1BA6E800590E99 /* NJSYUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NJSYUITests.swift; sourceTree = "<group>"; };
 		A95AE6E61F1BA6E800590E99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A95AE6F21F1BA7B400590E99 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		A95AE6F81F1CBCCE00590E99 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		A95AE6FA1F1CBD2A00590E99 /* UserPO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPO.swift; sourceTree = "<group>"; };
 		F20A5EC22CCB137E67ADD359 /* Pods_NJSY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NJSY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -102,7 +102,7 @@
 		A9257E8A1F1E4C3A00F3F4C1 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				A95AE6C61F1BA6E800590E99 /* LoginViewController.swift */,
+				2E7694E91F20AFA5007E5157 /* LoginViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -110,7 +110,7 @@
 		A9257E8B1F1E4C4200F3F4C1 /* service */ = {
 			isa = PBXGroup;
 			children = (
-				A95AE6F81F1CBCCE00590E99 /* UserService.swift */,
+				2E7694E71F20AF9B007E5157 /* UserService.swift */,
 			);
 			name = service;
 			sourceTree = "<group>";
@@ -118,7 +118,8 @@
 		A9257E8C1F1E4C4E00F3F4C1 /* po */ = {
 			isa = PBXGroup;
 			children = (
-				A95AE6FA1F1CBD2A00590E99 /* UserPO.swift */,
+				2E7694E31F20AF92007E5157 /* RoomPO.swift */,
+				2E7694E41F20AF92007E5157 /* UserPO.swift */,
 			);
 			name = po;
 			sourceTree = "<group>";
@@ -126,7 +127,7 @@
 		A9257E8D1F1E4C6100F3F4C1 /* dao */ = {
 			isa = PBXGroup;
 			children = (
-				A9257E8F1F1E4D0C00F3F4C1 /* UserDao.swift */,
+				2E7694E11F20AF83007E5157 /* UserDao.swift */,
 			);
 			name = dao;
 			sourceTree = "<group>";
@@ -134,6 +135,7 @@
 		A9257E8E1F1E4C6700F3F4C1 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				2E7694DF1F20AF77007E5157 /* Main.storyboard */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -141,7 +143,7 @@
 		A9257E911F1E5DE200F3F4C1 /* vo */ = {
 			isa = PBXGroup;
 			children = (
-				A9257E921F1E5DF100F3F4C1 /* UserVO.swift */,
+				2E7694DD1F20AF6D007E5157 /* UserVO.swift */,
 			);
 			name = vo;
 			sourceTree = "<group>";
@@ -180,9 +182,7 @@
 				A9257E8A1F1E4C3A00F3F4C1 /* controller */,
 				A95AE6BE1F1BA6E800590E99 /* AppDelegate.swift */,
 				A95AE6C41F1BA6E800590E99 /* GameScene.swift */,
-				A95AE6C81F1BA6E800590E99 /* Main.storyboard */,
 				A95AE6CB1F1BA6E800590E99 /* Assets.xcassets */,
-				A95AE6CD1F1BA6E800590E99 /* LaunchScreen.storyboard */,
 				A95AE6D01F1BA6E800590E99 /* Info.plist */,
 			);
 			path = NJSY;
@@ -328,10 +328,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E7694E01F20AF77007E5157 /* Main.storyboard in Resources */,
 				A95AE6F31F1BA7B400590E99 /* Podfile in Resources */,
-				A95AE6CA1F1BA6E800590E99 /* Main.storyboard in Resources */,
 				A95AE6CC1F1BA6E800590E99 /* Assets.xcassets in Resources */,
-				A95AE6CF1F1BA6E800590E99 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,13 +403,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A95AE6F91F1CBCCE00590E99 /* UserService.swift in Sources */,
+				2E7694E81F20AF9B007E5157 /* UserService.swift in Sources */,
+				2E7694E51F20AF92007E5157 /* RoomPO.swift in Sources */,
 				A95AE6C51F1BA6E800590E99 /* GameScene.swift in Sources */,
-				A95AE6C71F1BA6E800590E99 /* LoginViewController.swift in Sources */,
-				A9257E901F1E4D0C00F3F4C1 /* UserDao.swift in Sources */,
-				A9257E931F1E5DF100F3F4C1 /* UserVO.swift in Sources */,
-				A95AE6FB1F1CBD2A00590E99 /* UserPO.swift in Sources */,
+				2E7694DE1F20AF6D007E5157 /* UserVO.swift in Sources */,
+				2E7694EA1F20AFA5007E5157 /* LoginViewController.swift in Sources */,
+				2E7694E61F20AF92007E5157 /* UserPO.swift in Sources */,
 				A95AE6BF1F1BA6E800590E99 /* AppDelegate.swift in Sources */,
+				2E7694E21F20AF83007E5157 /* UserDao.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,25 +444,6 @@
 			targetProxy = A95AE6E11F1BA6E800590E99 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		A95AE6C81F1BA6E800590E99 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A95AE6C91F1BA6E800590E99 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A95AE6CD1F1BA6E800590E99 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A95AE6CE1F1BA6E800590E99 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A95AE6E71F1BA6E800590E99 /* Debug */ = {
