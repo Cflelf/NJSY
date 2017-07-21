@@ -29,11 +29,12 @@ class LoginViewController: UIViewController {
     
     private var userService:UserService!
     
+    private var roomService:RoomService!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.userService = UserService()//页面加载时初始化用户业务逻辑
+        self.userService = UserServiceImpl()//页面加载时初始化用户业务逻辑
         print(userService.login(account: "pxr", password: "123456"))
-//        userService.getUserByAccount(account: "pxr")
     }
 
     override func didReceiveMemoryWarning() {

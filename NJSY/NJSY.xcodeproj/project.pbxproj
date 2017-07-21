@@ -8,13 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		17A84162E64155CFD8B410FF /* Pods_NJSY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F20A5EC22CCB137E67ADD359 /* Pods_NJSY.framework */; };
+		2E06510D1F20C4B60087592A /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06510C1F20C4B60087592A /* RoomViewController.swift */; };
+		2E0651111F2185490087592A /* UserDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0651101F2185490087592A /* UserDao.swift */; };
+		2E0651141F2185C50087592A /* RoomDaoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0651121F2185C50087592A /* RoomDaoImpl.swift */; };
+		2E0651151F2185C50087592A /* UserDaoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0651131F2185C50087592A /* UserDaoImpl.swift */; };
+		2E0651181F2185D40087592A /* RoomServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0651161F2185D40087592A /* RoomServiceImpl.swift */; };
+		2E0651191F2185D40087592A /* UserServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0651171F2185D40087592A /* UserServiceImpl.swift */; };
+		2E06511B1F2186D40087592A /* RoomDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06511A1F2186D40087592A /* RoomDao.swift */; };
+		2E06511D1F2188F60087592A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06511C1F2188F60087592A /* UserService.swift */; };
+		2E06511F1F2189100087592A /* RoomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06511E1F2189100087592A /* RoomService.swift */; };
 		2E7694DE1F20AF6D007E5157 /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694DD1F20AF6D007E5157 /* UserVO.swift */; };
 		2E7694E01F20AF77007E5157 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E7694DF1F20AF77007E5157 /* Main.storyboard */; };
-		2E7694E21F20AF83007E5157 /* UserDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694E11F20AF83007E5157 /* UserDao.swift */; };
-		2E7694E51F20AF92007E5157 /* RoomPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694E31F20AF92007E5157 /* RoomPO.swift */; };
 		2E7694E61F20AF92007E5157 /* UserPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694E41F20AF92007E5157 /* UserPO.swift */; };
-		2E7694E81F20AF9B007E5157 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694E71F20AF9B007E5157 /* UserService.swift */; };
 		2E7694EA1F20AFA5007E5157 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694E91F20AFA5007E5157 /* LoginViewController.swift */; };
+		2E7694EC1F20B017007E5157 /* RoomPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694EB1F20B017007E5157 /* RoomPO.swift */; };
 		A95AE6BF1F1BA6E800590E99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6BE1F1BA6E800590E99 /* AppDelegate.swift */; };
 		A95AE6C51F1BA6E800590E99 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6C41F1BA6E800590E99 /* GameScene.swift */; };
 		A95AE6CC1F1BA6E800590E99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95AE6CB1F1BA6E800590E99 /* Assets.xcassets */; };
@@ -42,13 +49,20 @@
 
 /* Begin PBXFileReference section */
 		0AFEC174849FA67C7FCB3B5B /* Pods-NJSY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJSY.release.xcconfig"; path = "Pods/Target Support Files/Pods-NJSY/Pods-NJSY.release.xcconfig"; sourceTree = "<group>"; };
+		2E06510C1F20C4B60087592A /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomViewController.swift; path = Base.lproj/controller/RoomViewController.swift; sourceTree = "<group>"; };
+		2E0651101F2185490087592A /* UserDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDao.swift; path = Base.lproj/dao/UserDao.swift; sourceTree = "<group>"; };
+		2E0651121F2185C50087592A /* RoomDaoImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomDaoImpl.swift; path = Base.lproj/daoImpl/RoomDaoImpl.swift; sourceTree = "<group>"; };
+		2E0651131F2185C50087592A /* UserDaoImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDaoImpl.swift; path = Base.lproj/daoImpl/UserDaoImpl.swift; sourceTree = "<group>"; };
+		2E0651161F2185D40087592A /* RoomServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomServiceImpl.swift; path = Base.lproj/serviceImpl/RoomServiceImpl.swift; sourceTree = "<group>"; };
+		2E0651171F2185D40087592A /* UserServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserServiceImpl.swift; path = Base.lproj/serviceImpl/UserServiceImpl.swift; sourceTree = "<group>"; };
+		2E06511A1F2186D40087592A /* RoomDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomDao.swift; path = Base.lproj/dao/RoomDao.swift; sourceTree = "<group>"; };
+		2E06511C1F2188F60087592A /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = Base.lproj/service/UserService.swift; sourceTree = "<group>"; };
+		2E06511E1F2189100087592A /* RoomService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomService.swift; path = Base.lproj/service/RoomService.swift; sourceTree = "<group>"; };
 		2E7694DD1F20AF6D007E5157 /* UserVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserVO.swift; path = Base.lproj/vo/UserVO.swift; sourceTree = "<group>"; };
 		2E7694DF1F20AF77007E5157 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/view/Main.storyboard; sourceTree = "<group>"; };
-		2E7694E11F20AF83007E5157 /* UserDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDao.swift; path = Base.lproj/dao/UserDao.swift; sourceTree = "<group>"; };
-		2E7694E31F20AF92007E5157 /* RoomPO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomPO.swift; path = Base.lproj/po/RoomPO.swift; sourceTree = "<group>"; };
 		2E7694E41F20AF92007E5157 /* UserPO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserPO.swift; path = Base.lproj/po/UserPO.swift; sourceTree = "<group>"; };
-		2E7694E71F20AF9B007E5157 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = Base.lproj/service/UserService.swift; sourceTree = "<group>"; };
 		2E7694E91F20AFA5007E5157 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Base.lproj/controller/LoginViewController.swift; sourceTree = "<group>"; };
+		2E7694EB1F20B017007E5157 /* RoomPO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomPO.swift; path = Base.lproj/po/RoomPO.swift; sourceTree = "<group>"; };
 		96DFE8D3F0C5FCA9D4EBDE86 /* Pods-NJSY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJSY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NJSY/Pods-NJSY.debug.xcconfig"; sourceTree = "<group>"; };
 		A95AE6BB1F1BA6E800590E99 /* NJSY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NJSY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95AE6BE1F1BA6E800590E99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,10 +113,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2E06510E1F2184E10087592A /* serviceImpl */ = {
+			isa = PBXGroup;
+			children = (
+				2E0651161F2185D40087592A /* RoomServiceImpl.swift */,
+				2E0651171F2185D40087592A /* UserServiceImpl.swift */,
+			);
+			name = serviceImpl;
+			sourceTree = "<group>";
+		};
+		2E06510F1F2184ED0087592A /* daoImpl */ = {
+			isa = PBXGroup;
+			children = (
+				2E0651121F2185C50087592A /* RoomDaoImpl.swift */,
+				2E0651131F2185C50087592A /* UserDaoImpl.swift */,
+			);
+			name = daoImpl;
+			sourceTree = "<group>";
+		};
 		A9257E8A1F1E4C3A00F3F4C1 /* controller */ = {
 			isa = PBXGroup;
 			children = (
 				2E7694E91F20AFA5007E5157 /* LoginViewController.swift */,
+				2E06510C1F20C4B60087592A /* RoomViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -110,7 +143,8 @@
 		A9257E8B1F1E4C4200F3F4C1 /* service */ = {
 			isa = PBXGroup;
 			children = (
-				2E7694E71F20AF9B007E5157 /* UserService.swift */,
+				2E06511C1F2188F60087592A /* UserService.swift */,
+				2E06511E1F2189100087592A /* RoomService.swift */,
 			);
 			name = service;
 			sourceTree = "<group>";
@@ -118,8 +152,8 @@
 		A9257E8C1F1E4C4E00F3F4C1 /* po */ = {
 			isa = PBXGroup;
 			children = (
-				2E7694E31F20AF92007E5157 /* RoomPO.swift */,
 				2E7694E41F20AF92007E5157 /* UserPO.swift */,
+				2E7694EB1F20B017007E5157 /* RoomPO.swift */,
 			);
 			name = po;
 			sourceTree = "<group>";
@@ -127,7 +161,8 @@
 		A9257E8D1F1E4C6100F3F4C1 /* dao */ = {
 			isa = PBXGroup;
 			children = (
-				2E7694E11F20AF83007E5157 /* UserDao.swift */,
+				2E0651101F2185490087592A /* UserDao.swift */,
+				2E06511A1F2186D40087592A /* RoomDao.swift */,
 			);
 			name = dao;
 			sourceTree = "<group>";
@@ -174,6 +209,8 @@
 		A95AE6BD1F1BA6E800590E99 /* NJSY */ = {
 			isa = PBXGroup;
 			children = (
+				2E06510F1F2184ED0087592A /* daoImpl */,
+				2E06510E1F2184E10087592A /* serviceImpl */,
 				A9257E911F1E5DE200F3F4C1 /* vo */,
 				A9257E8E1F1E4C6700F3F4C1 /* view */,
 				A9257E8D1F1E4C6100F3F4C1 /* dao */,
@@ -403,14 +440,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E7694E81F20AF9B007E5157 /* UserService.swift in Sources */,
-				2E7694E51F20AF92007E5157 /* RoomPO.swift in Sources */,
+				2E06511D1F2188F60087592A /* UserService.swift in Sources */,
+				2E0651151F2185C50087592A /* UserDaoImpl.swift in Sources */,
 				A95AE6C51F1BA6E800590E99 /* GameScene.swift in Sources */,
 				2E7694DE1F20AF6D007E5157 /* UserVO.swift in Sources */,
+				2E06511B1F2186D40087592A /* RoomDao.swift in Sources */,
+				2E0651191F2185D40087592A /* UserServiceImpl.swift in Sources */,
+				2E0651141F2185C50087592A /* RoomDaoImpl.swift in Sources */,
+				2E0651111F2185490087592A /* UserDao.swift in Sources */,
+				2E7694EC1F20B017007E5157 /* RoomPO.swift in Sources */,
+				2E06511F1F2189100087592A /* RoomService.swift in Sources */,
 				2E7694EA1F20AFA5007E5157 /* LoginViewController.swift in Sources */,
+				2E06510D1F20C4B60087592A /* RoomViewController.swift in Sources */,
+				2E0651181F2185D40087592A /* RoomServiceImpl.swift in Sources */,
 				2E7694E61F20AF92007E5157 /* UserPO.swift in Sources */,
 				A95AE6BF1F1BA6E800590E99 /* AppDelegate.swift in Sources */,
-				2E7694E21F20AF83007E5157 /* UserDao.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
