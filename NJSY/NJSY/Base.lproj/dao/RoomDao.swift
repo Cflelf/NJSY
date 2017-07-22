@@ -7,7 +7,7 @@
 //
 
 protocol RoomDao{
-    func updateRoom(roomPO:RoomPO) -> String
+    func updateRoom(roomPO:RoomPO,account:String) -> String
     
     func getRoomById(roomId:Int) -> RoomPO?
 

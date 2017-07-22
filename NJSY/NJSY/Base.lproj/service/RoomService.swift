@@ -8,4 +8,7 @@
 
 protocol RoomService {
     func enterRoom(userAccount:String,roomId:Int)
+    func getRoomById(roomId:Int) -> RoomVO?
+    func UserReady(account:String,roomId:Int)
+    func GameStart(roomId:Int) -> String
 }
