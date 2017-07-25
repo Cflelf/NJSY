@@ -21,6 +21,9 @@
 		2E06511D1F2188F60087592A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06511C1F2188F60087592A /* UserService.swift */; };
 		2E06511F1F2189100087592A /* RoomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06511E1F2189100087592A /* RoomService.swift */; };
 		2E0651231F21A9210087592A /* CharacterPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0651221F21A9210087592A /* CharacterPO.swift */; };
+		2E1867651F26DB8F0057DBFE /* UserMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1867641F26DB8F0057DBFE /* UserMain.storyboard */; };
+		2E1867671F26DDA20057DBFE /* UserMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1867661F26DDA20057DBFE /* UserMainController.swift */; };
+		2E1867691F26DF0C0057DBFE /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1867681F26DF0C0057DBFE /* SnapKit.framework */; };
 		2E7694DE1F20AF6D007E5157 /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694DD1F20AF6D007E5157 /* UserVO.swift */; };
 		2E7694E01F20AF77007E5157 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E7694DF1F20AF77007E5157 /* Main.storyboard */; };
 		2E7694E61F20AF92007E5157 /* UserPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694E41F20AF92007E5157 /* UserPO.swift */; };
@@ -67,6 +70,9 @@
 		2E06511C1F2188F60087592A /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = Base.lproj/service/UserService.swift; sourceTree = "<group>"; };
 		2E06511E1F2189100087592A /* RoomService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomService.swift; path = Base.lproj/service/RoomService.swift; sourceTree = "<group>"; };
 		2E0651221F21A9210087592A /* CharacterPO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterPO.swift; path = Base.lproj/po/CharacterPO.swift; sourceTree = "<group>"; };
+		2E1867641F26DB8F0057DBFE /* UserMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UserMain.storyboard; path = Base.lproj/view/UserMain.storyboard; sourceTree = "<group>"; };
+		2E1867661F26DDA20057DBFE /* UserMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserMainController.swift; path = Base.lproj/controller/UserMainController.swift; sourceTree = "<group>"; };
+		2E1867681F26DF0C0057DBFE /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/NJSY-bxuhmbrnphmovwbsebbypgdbasio/Build/Products/Debug-iphonesimulator/SnapKit/SnapKit.framework"; sourceTree = "<group>"; };
 		2E7694DD1F20AF6D007E5157 /* UserVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserVO.swift; path = Base.lproj/vo/UserVO.swift; sourceTree = "<group>"; };
 		2E7694DF1F20AF77007E5157 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/view/Main.storyboard; sourceTree = "<group>"; };
 		2E7694E41F20AF92007E5157 /* UserPO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserPO.swift; path = Base.lproj/po/UserPO.swift; sourceTree = "<group>"; };
@@ -85,7 +91,7 @@
 		A95AE6E01F1BA6E800590E99 /* NJSYUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NJSYUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95AE6E41F1BA6E800590E99 /* NJSYUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NJSYUITests.swift; sourceTree = "<group>"; };
 		A95AE6E61F1BA6E800590E99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A95AE6F21F1BA7B400590E99 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		A95AE6F21F1BA7B400590E99 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F20A5EC22CCB137E67ADD359 /* Pods_NJSY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NJSY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -94,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E1867691F26DF0C0057DBFE /* SnapKit.framework in Frameworks */,
 				2E0448B91F21F73500207D73 /* LeanCloud.framework in Frameworks */,
 				17A84162E64155CFD8B410FF /* Pods_NJSY.framework in Frameworks */,
 			);
@@ -119,6 +126,7 @@
 		2DFBC6EA35CC8BC7AACF438A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E1867681F26DF0C0057DBFE /* SnapKit.framework */,
 				2E0448B81F21F73500207D73 /* LeanCloud.framework */,
 				F20A5EC22CCB137E67ADD359 /* Pods_NJSY.framework */,
 			);
@@ -148,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				2E7694E91F20AFA5007E5157 /* LoginViewController.swift */,
+				2E1867661F26DDA20057DBFE /* UserMainController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -186,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				2E7694DF1F20AF77007E5157 /* Main.storyboard */,
+				2E1867641F26DB8F0057DBFE /* UserMain.storyboard */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -383,6 +393,7 @@
 			files = (
 				2E7694E01F20AF77007E5157 /* Main.storyboard in Resources */,
 				A95AE6F31F1BA7B400590E99 /* Podfile in Resources */,
+				2E1867651F26DB8F0057DBFE /* UserMain.storyboard in Resources */,
 				A95AE6CC1F1BA6E800590E99 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +478,7 @@
 				2E0651191F2185D40087592A /* UserServiceImpl.swift in Sources */,
 				2E0651141F2185C50087592A /* RoomDaoImpl.swift in Sources */,
 				2E0651111F2185490087592A /* UserDao.swift in Sources */,
+				2E1867671F26DDA20057DBFE /* UserMainController.swift in Sources */,
 				2E7694EC1F20B017007E5157 /* RoomPO.swift in Sources */,
 				2E06511F1F2189100087592A /* RoomService.swift in Sources */,
 				2E7694EA1F20AFA5007E5157 /* LoginViewController.swift in Sources */,
