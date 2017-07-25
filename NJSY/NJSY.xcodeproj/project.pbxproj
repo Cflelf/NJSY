@@ -24,7 +24,7 @@
 		2E7694DE1F20AF6D007E5157 /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694DD1F20AF6D007E5157 /* UserVO.swift */; };
 		2E7694E01F20AF77007E5157 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E7694DF1F20AF77007E5157 /* Main.storyboard */; };
 		2E7694E61F20AF92007E5157 /* UserPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694E41F20AF92007E5157 /* UserPO.swift */; };
-		2E7694EA1F20AFA5007E5157 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694E91F20AFA5007E5157 /* LoginViewController.swift */; };
+		2E7694EA1F20AFA5007E5157 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694E91F20AFA5007E5157 /* InitialViewController.swift */; };
 		2E7694EC1F20B017007E5157 /* RoomPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694EB1F20B017007E5157 /* RoomPO.swift */; };
 		2EBD69B61F232A4D00726771 /* BattlePO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD69B51F232A4D00726771 /* BattlePO.swift */; };
 		A95AE6BF1F1BA6E800590E99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6BE1F1BA6E800590E99 /* AppDelegate.swift */; };
@@ -70,7 +70,7 @@
 		2E7694DD1F20AF6D007E5157 /* UserVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserVO.swift; path = Base.lproj/vo/UserVO.swift; sourceTree = "<group>"; };
 		2E7694DF1F20AF77007E5157 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/view/Main.storyboard; sourceTree = "<group>"; };
 		2E7694E41F20AF92007E5157 /* UserPO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserPO.swift; path = Base.lproj/po/UserPO.swift; sourceTree = "<group>"; };
-		2E7694E91F20AFA5007E5157 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Base.lproj/controller/LoginViewController.swift; sourceTree = "<group>"; };
+		2E7694E91F20AFA5007E5157 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InitialViewController.swift; path = Base.lproj/controller/InitialViewController.swift; sourceTree = "<group>"; };
 		2E7694EB1F20B017007E5157 /* RoomPO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomPO.swift; path = Base.lproj/po/RoomPO.swift; sourceTree = "<group>"; };
 		2EBD69B51F232A4D00726771 /* BattlePO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BattlePO.swift; path = Base.lproj/po/BattlePO.swift; sourceTree = "<group>"; };
 		96DFE8D3F0C5FCA9D4EBDE86 /* Pods-NJSY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJSY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NJSY/Pods-NJSY.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 		A9257E8A1F1E4C3A00F3F4C1 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				2E7694E91F20AFA5007E5157 /* LoginViewController.swift */,
+				2E7694E91F20AFA5007E5157 /* InitialViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -469,7 +469,7 @@
 				2E0651111F2185490087592A /* UserDao.swift in Sources */,
 				2E7694EC1F20B017007E5157 /* RoomPO.swift in Sources */,
 				2E06511F1F2189100087592A /* RoomService.swift in Sources */,
-				2E7694EA1F20AFA5007E5157 /* LoginViewController.swift in Sources */,
+				2E7694EA1F20AFA5007E5157 /* InitialViewController.swift in Sources */,
 				2EBD69B61F232A4D00726771 /* BattlePO.swift in Sources */,
 				2E0651181F2185D40087592A /* RoomServiceImpl.swift in Sources */,
 				2E0651231F21A9210087592A /* CharacterPO.swift in Sources */,
