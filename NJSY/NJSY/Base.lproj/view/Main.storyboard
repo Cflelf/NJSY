@@ -12,7 +12,7 @@
         <!--Initial View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="InitialViewController" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="InitialViewController" customModule="NJSY" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
@@ -42,9 +42,6 @@
                             <constraint firstItem="fCg-oG-6dF" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" id="pSp-hv-b1K"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="initialView" destination="fCg-oG-6dF" id="Kzo-aG-Zm5"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
