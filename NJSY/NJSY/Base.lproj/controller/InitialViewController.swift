@@ -11,10 +11,6 @@ import SpriteKit
 
 class InitialViewController: UIViewController {
     
-    private var userService:UserService!
-    
-    private var roomService:RoomService!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let gesture = UITapGestureRecognizer(target: self, action: #selector(jumpToSecondView))

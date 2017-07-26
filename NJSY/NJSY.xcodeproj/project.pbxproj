@@ -36,6 +36,7 @@
 		A95AE6DA1F1BA6E800590E99 /* NJSYTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6D91F1BA6E800590E99 /* NJSYTests.swift */; };
 		A95AE6E51F1BA6E800590E99 /* NJSYUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6E41F1BA6E800590E99 /* NJSYUITests.swift */; };
 		A95AE6F31F1BA7B400590E99 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A95AE6F21F1BA7B400590E99 /* Podfile */; };
+		CA961DF11F27718D002267E8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA961DF01F27718D002267E8 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -475,6 +476,7 @@
 				2E0448B71F21F6E600207D73 /* BattleDaoImpl.swift in Sources */,
 				2E0448B51F21F53000207D73 /* BattleDao.swift in Sources */,
 				2E06511B1F2186D40087592A /* RoomDao.swift in Sources */,
+				CA961DF11F27718D002267E8 /* SecondViewController.swift in Sources */,
 				2E0651191F2185D40087592A /* UserServiceImpl.swift in Sources */,
 				2E0651141F2185C50087592A /* RoomDaoImpl.swift in Sources */,
 				2E0651111F2185490087592A /* UserDao.swift in Sources */,
