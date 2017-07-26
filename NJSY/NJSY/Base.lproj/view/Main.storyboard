@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -67,44 +66,47 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secondView" translatesAutoresizingMaskIntoConstraints="NO" id="Crl-8m-Xrz">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMY-uo-W83">
-                                <rect key="frame" x="387" y="309" width="78" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMY-uo-W83">
+                                <rect key="frame" x="387" y="309.5" width="78" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="SIGN UP">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="缘定菁园" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoA-kb-bnp">
-                                <rect key="frame" x="266" y="43" width="136" height="48"/>
-                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="34"/>
-                                <color key="textColor" red="0.9994240403175354" green="0.23228519715844378" blue="0.51216249917596057" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="highlightedColor" red="0.21375934429999999" green="0.34630379529999999" blue="0.95377266839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="shadowColor" red="0.76977715619999998" green="1" blue="0.16987739930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ob-fA-W3t">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ob-fA-W3t">
                                 <rect key="frame" x="182" y="309" width="71" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="SIGN IN">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="缘定菁园" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoA-kb-bnp">
+                                <rect key="frame" x="265" y="38" width="136" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="nfs-1G-4uu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="34"/>
+                                <color key="textColor" red="0.9994240403175354" green="0.23228519715844378" blue="0.51216249917596057" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.21375934429999999" green="0.34630379529999999" blue="0.95377266839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" red="0.76977715619999998" green="1" blue="0.16987739930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nxv-lj-ImA" firstAttribute="top" secondItem="CoA-kb-bnp" secondAttribute="bottom" constant="284" id="C6o-Pc-Is2"/>
-                            <constraint firstItem="0Ob-fA-W3t" firstAttribute="leading" secondItem="qgB-TC-Ym1" secondAttribute="leadingMargin" constant="162" id="CdK-ei-xHz"/>
-                            <constraint firstItem="IMY-uo-W83" firstAttribute="leading" secondItem="0Ob-fA-W3t" secondAttribute="trailing" constant="134" id="Mme-3X-ci9"/>
-                            <constraint firstAttribute="trailing" secondItem="Crl-8m-Xrz" secondAttribute="trailing" id="UOz-x6-UN3"/>
-                            <constraint firstItem="CoA-kb-bnp" firstAttribute="centerX" secondItem="qgB-TC-Ym1" secondAttribute="centerX" id="Uhe-xc-TlS"/>
-                            <constraint firstItem="CoA-kb-bnp" firstAttribute="top" secondItem="0k3-0B-ggA" secondAttribute="bottom" constant="23" id="VUP-hE-aug"/>
-                            <constraint firstItem="nxv-lj-ImA" firstAttribute="top" secondItem="Crl-8m-Xrz" secondAttribute="bottom" id="Wo9-xm-hXl"/>
-                            <constraint firstItem="IMY-uo-W83" firstAttribute="baseline" secondItem="0Ob-fA-W3t" secondAttribute="baseline" id="iga-s9-LDn"/>
-                            <constraint firstItem="Crl-8m-Xrz" firstAttribute="leading" secondItem="qgB-TC-Ym1" secondAttribute="leading" id="k2C-t7-79M"/>
-                            <constraint firstItem="Crl-8m-Xrz" firstAttribute="top" secondItem="qgB-TC-Ym1" secondAttribute="top" id="oVW-Wv-fLa"/>
-                            <constraint firstItem="nxv-lj-ImA" firstAttribute="top" secondItem="0Ob-fA-W3t" secondAttribute="bottom" constant="30" id="pYV-JX-nJG"/>
-                            <constraint firstItem="0Ob-fA-W3t" firstAttribute="top" secondItem="0k3-0B-ggA" secondAttribute="bottom" constant="289" id="pjj-fR-kpk"/>
+                            <constraint firstItem="CoA-kb-bnp" firstAttribute="centerX" secondItem="qgB-TC-Ym1" secondAttribute="centerX" id="44Z-wd-q2e"/>
+                            <constraint firstAttribute="trailing" secondItem="Crl-8m-Xrz" secondAttribute="trailing" id="8of-ey-b3o"/>
+                            <constraint firstItem="nxv-lj-ImA" firstAttribute="top" secondItem="Crl-8m-Xrz" secondAttribute="bottom" id="EVs-Qd-Pwf"/>
+                            <constraint firstItem="Crl-8m-Xrz" firstAttribute="leading" secondItem="qgB-TC-Ym1" secondAttribute="leading" id="EcO-Q2-SbF"/>
+                            <constraint firstItem="CoA-kb-bnp" firstAttribute="top" secondItem="0k3-0B-ggA" secondAttribute="bottom" constant="18" id="v6Q-qR-Bqp"/>
+                            <constraint firstItem="Crl-8m-Xrz" firstAttribute="top" secondItem="qgB-TC-Ym1" secondAttribute="top" id="yXa-C9-CPm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="SignUpButton" destination="IMY-uo-W83" id="7tQ-1J-pqe"/>
+                        <outlet property="signInButton" destination="0Ob-fA-W3t" id="5oE-Vy-313"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ENs-yd-VjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
