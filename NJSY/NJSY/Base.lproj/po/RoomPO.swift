@@ -22,13 +22,16 @@ class RoomPO{
     
     private var userStatus:Array<Bool>!
     
-    init(limit:Int,id:Int,roomType:String,userList:Array<String>,master:String,userStatus:Array<Bool>) {
+    private var roomName:String!
+    
+    init(limit:Int,id:Int,roomType:String,userList:Array<String>,master:String,userStatus:Array<Bool>,roomName:String) {
         self.userList = userList
         self.id = id
         self.limit = limit
         self.roomType = roomType
         self.master = master
         self.userStatus = userStatus
+        self.roomName = roomName
     }
     
     public func getUserList() -> Array<String>{return self.userList}
@@ -37,6 +40,7 @@ class RoomPO{
     public func getRoomType() -> String{return self.roomType}
     public func getMaster() -> String{return self.master}
     public func getUserStatus() -> Array<Bool>{return self.userStatus}
+    public func getRoomName() -> String{return self.roomName}
     
     public func setUserList(userList:Array<String>){self.userList = userList}
     public func setUserStatus(userStatus:Array<Bool>){self.userStatus = userStatus}

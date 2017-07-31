@@ -36,26 +36,46 @@ class RoomDaoImpl:RoomDao{
     }
     
     public func getRoomById(roomId:Int) -> RoomPO?{
-        var roomPO:RoomPO? = nil
         let roomLCObject = getRoomLCObject(roomId: roomId)
         if roomLCObject != nil{
-            let roomType = roomLCObject!.get("roomType")!.stringValue!
-            var user = roomLCObject!.get("UserList")?.arrayValue
-            let master = roomLCObject!.get("Master")!.stringValue!
-            var userStatus = roomLCObject!.get("UserStatus")?.arrayValue
-            if user==nil{
-                user = Array<String>()
-            }
-            if userStatus == nil{
-                userStatus = Array<Bool>()
-            }
-            let limit = roomLCObject!.get("limit")!.intValue!
-            roomPO = RoomPO(limit: limit, id: roomId, roomType: roomType,userList: user as! Array<String>, master: master , userStatus: userStatus as! Array<Bool>)
-            return roomPO
+            return LCObject2PO(roomLCObject: roomLCObject!)
         }
         else{
             return nil
         }
+    }
+    
+    func getRoomByType(roomType:String) -> [RoomPO]?{
+        let result = LCCQLClient.execute("select * from Room where roomType = '\(roomType)'")
+        var roomList = [RoomPO]()
+        switch(result){
+        case .success(let rooms):
+            for room in rooms.objects{
+                roomList.append(LCObject2PO(roomLCObject: room))
+            }
+            return roomList
+        case .failure(let error):
+            print(error)
+            return nil
+        }
+    }
+    
+    private func LCObject2PO(roomLCObject:LCObject) -> RoomPO{
+        let roomID = roomLCObject.get("id")!.intValue!
+        let roomType = roomLCObject.get("roomType")!.stringValue!
+        let roomName = roomLCObject.get("RoomName")!.stringValue!
+        var user = roomLCObject.get("UserList")?.arrayValue
+        let master = roomLCObject.get("Master")!.stringValue!
+        var userStatus = roomLCObject.get("UserStatus")?.arrayValue
+        if user==nil{
+            user = Array<String>()
+        }
+        if userStatus == nil{
+            userStatus = Array<Bool>()
+        }
+        let limit = roomLCObject.get("limit")!.intValue!
+        let roomPO = RoomPO(limit: limit, id: roomID, roomType: roomType,userList: user as! Array<String>, master: master , userStatus: userStatus as! Array<Bool>,roomName: roomName)
+        return roomPO
     }
     
     private func getRoomLCObject(roomId:Int) -> LCObject?{

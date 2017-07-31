@@ -11,4 +11,5 @@ protocol RoomService {
     func getRoomById(roomId:Int) -> RoomVO?
     func UserReady(account:String,roomId:Int)
     func GameStart(roomId:Int) -> String
+    func getRoomByType(roomType:String) -> [RoomVO]?
 }

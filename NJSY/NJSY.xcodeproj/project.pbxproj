@@ -22,9 +22,11 @@
 		2E06511F1F2189100087592A /* RoomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06511E1F2189100087592A /* RoomService.swift */; };
 		2E0651231F21A9210087592A /* CharacterPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0651221F21A9210087592A /* CharacterPO.swift */; };
 		2E1867651F26DB8F0057DBFE /* UserMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1867641F26DB8F0057DBFE /* UserMain.storyboard */; };
-		2E1867671F26DDA20057DBFE /* UserMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1867661F26DDA20057DBFE /* UserMainController.swift */; };
 		2E1867691F26DF0C0057DBFE /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1867681F26DF0C0057DBFE /* SnapKit.framework */; };
 		2E52EAEA1F287A3F005E093F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E52EAE91F287A3F005E093F /* SecondViewController.swift */; };
+		2E6904BA1F2ECE81008ACB6D /* UserMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6904B91F2ECE81008ACB6D /* UserMainController.swift */; };
+		2E6904BF1F2ED05A008ACB6D /* paperfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E6904BE1F2ED05A008ACB6D /* paperfont.ttf */; };
+		2E6904C11F2EE9C5008ACB6D /* RoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6904C01F2EE9C5008ACB6D /* RoomListViewController.swift */; };
 		2E7694DE1F20AF6D007E5157 /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694DD1F20AF6D007E5157 /* UserVO.swift */; };
 		2E7694E01F20AF77007E5157 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E7694DF1F20AF77007E5157 /* Main.storyboard */; };
 		2E7694E61F20AF92007E5157 /* UserPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694E41F20AF92007E5157 /* UserPO.swift */; };
@@ -72,9 +74,11 @@
 		2E06511E1F2189100087592A /* RoomService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomService.swift; path = Base.lproj/service/RoomService.swift; sourceTree = "<group>"; };
 		2E0651221F21A9210087592A /* CharacterPO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterPO.swift; path = Base.lproj/po/CharacterPO.swift; sourceTree = "<group>"; };
 		2E1867641F26DB8F0057DBFE /* UserMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UserMain.storyboard; path = Base.lproj/view/UserMain.storyboard; sourceTree = "<group>"; };
-		2E1867661F26DDA20057DBFE /* UserMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserMainController.swift; path = Base.lproj/controller/UserMainController.swift; sourceTree = "<group>"; };
 		2E1867681F26DF0C0057DBFE /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/NJSY-bxuhmbrnphmovwbsebbypgdbasio/Build/Products/Debug-iphonesimulator/SnapKit/SnapKit.framework"; sourceTree = "<group>"; };
 		2E52EAE91F287A3F005E093F /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = Base.lproj/controller/SecondViewController.swift; sourceTree = "<group>"; };
+		2E6904B91F2ECE81008ACB6D /* UserMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserMainController.swift; path = Base.lproj/controller/UserMainController.swift; sourceTree = "<group>"; };
+		2E6904BE1F2ED05A008ACB6D /* paperfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = paperfont.ttf; path = Base.lproj/SupportingFiles/paperfont.ttf; sourceTree = "<group>"; };
+		2E6904C01F2EE9C5008ACB6D /* RoomListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomListViewController.swift; path = Base.lproj/controller/RoomListViewController.swift; sourceTree = "<group>"; };
 		2E7694DD1F20AF6D007E5157 /* UserVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserVO.swift; path = Base.lproj/vo/UserVO.swift; sourceTree = "<group>"; };
 		2E7694DF1F20AF77007E5157 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/view/Main.storyboard; sourceTree = "<group>"; };
 		2E7694E41F20AF92007E5157 /* UserPO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserPO.swift; path = Base.lproj/po/UserPO.swift; sourceTree = "<group>"; };
@@ -154,12 +158,21 @@
 			name = daoImpl;
 			sourceTree = "<group>";
 		};
+		2E6904BB1F2ECF3A008ACB6D /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2E6904BE1F2ED05A008ACB6D /* paperfont.ttf */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		A9257E8A1F1E4C3A00F3F4C1 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				2E6904B91F2ECE81008ACB6D /* UserMainController.swift */,
 				2E52EAE91F287A3F005E093F /* SecondViewController.swift */,
 				2E7694E91F20AFA5007E5157 /* InitialViewController.swift */,
-				2E1867661F26DDA20057DBFE /* UserMainController.swift */,
+				2E6904C01F2EE9C5008ACB6D /* RoomListViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -238,6 +251,7 @@
 		A95AE6BD1F1BA6E800590E99 /* NJSY */ = {
 			isa = PBXGroup;
 			children = (
+				2E6904BB1F2ECF3A008ACB6D /* SupportingFiles */,
 				2E06510F1F2184ED0087592A /* daoImpl */,
 				2E06510E1F2184E10087592A /* serviceImpl */,
 				A9257E911F1E5DE200F3F4C1 /* vo */,
@@ -397,6 +411,7 @@
 				2E7694E01F20AF77007E5157 /* Main.storyboard in Resources */,
 				A95AE6F31F1BA7B400590E99 /* Podfile in Resources */,
 				2E1867651F26DB8F0057DBFE /* UserMain.storyboard in Resources */,
+				2E6904BF1F2ED05A008ACB6D /* paperfont.ttf in Resources */,
 				A95AE6CC1F1BA6E800590E99 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,6 +488,7 @@
 				2E52EAEA1F287A3F005E093F /* SecondViewController.swift in Sources */,
 				2E06511D1F2188F60087592A /* UserService.swift in Sources */,
 				2E0448B11F21AD8400207D73 /* RoomVO.swift in Sources */,
+				2E6904BA1F2ECE81008ACB6D /* UserMainController.swift in Sources */,
 				2E0651151F2185C50087592A /* UserDaoImpl.swift in Sources */,
 				A95AE6C51F1BA6E800590E99 /* GameScene.swift in Sources */,
 				2E7694DE1F20AF6D007E5157 /* UserVO.swift in Sources */,
@@ -482,7 +498,6 @@
 				2E0651191F2185D40087592A /* UserServiceImpl.swift in Sources */,
 				2E0651141F2185C50087592A /* RoomDaoImpl.swift in Sources */,
 				2E0651111F2185490087592A /* UserDao.swift in Sources */,
-				2E1867671F26DDA20057DBFE /* UserMainController.swift in Sources */,
 				2E7694EC1F20B017007E5157 /* RoomPO.swift in Sources */,
 				2E06511F1F2189100087592A /* RoomService.swift in Sources */,
 				2E7694EA1F20AFA5007E5157 /* InitialViewController.swift in Sources */,
@@ -491,6 +506,7 @@
 				2E0651231F21A9210087592A /* CharacterPO.swift in Sources */,
 				2E7694E61F20AF92007E5157 /* UserPO.swift in Sources */,
 				A95AE6BF1F1BA6E800590E99 /* AppDelegate.swift in Sources */,
+				2E6904C11F2EE9C5008ACB6D /* RoomListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

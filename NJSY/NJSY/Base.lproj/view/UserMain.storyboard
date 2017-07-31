@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NJLogo" translatesAutoresizingMaskIntoConstraints="NO" id="c4R-9U-2gY">
-                                <rect key="frame" x="417" y="34" width="250" height="48"/>
+                                <rect key="frame" x="417" y="42" width="250" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="8Gq-40-HBm"/>
                                     <constraint firstAttribute="width" secondItem="c4R-9U-2gY" secondAttribute="height" multiplier="589:113" id="fZ4-VQ-gWH"/>
@@ -35,7 +35,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="c4R-9U-2gY" firstAttribute="top" secondItem="u1W-yV-A0t" secondAttribute="bottom" constant="14" id="2tT-Yh-2Ug"/>
+                            <constraint firstItem="c4R-9U-2gY" firstAttribute="top" secondItem="u1W-yV-A0t" secondAttribute="bottom" constant="22" id="2tT-Yh-2Ug"/>
                             <constraint firstItem="F1b-bM-BFd" firstAttribute="leading" secondItem="1KY-jz-F1V" secondAttribute="leading" id="86O-38-2KB"/>
                             <constraint firstItem="F1b-bM-BFd" firstAttribute="top" secondItem="1KY-jz-F1V" secondAttribute="top" id="EXO-b6-jqp"/>
                             <constraint firstItem="YEL-QK-PHX" firstAttribute="top" secondItem="F1b-bM-BFd" secondAttribute="bottom" id="QUq-Ci-8br"/>
