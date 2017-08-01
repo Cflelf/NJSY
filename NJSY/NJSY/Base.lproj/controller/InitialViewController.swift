@@ -27,6 +27,7 @@ class InitialViewController: UIViewController {
         let destinationStoryboard = UIStoryboard(name:"Main", bundle: nil)
         let destinationViewController = destinationStoryboard.instantiateViewController(withIdentifier: "SecondView")
         self.present(destinationViewController, animated: true, completion: nil)
+        //self.transition(from: self, to: destinationViewController, duration: 1.0, options: .transitionCurlUp, animations: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>, completion: nil)
     }
 
 }

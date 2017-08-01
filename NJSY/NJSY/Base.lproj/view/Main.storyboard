@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="retina4_7" orientation="landscape">
+    <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,14 +18,14 @@
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
                     </layoutGuides>
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="fCg-oG-6dF">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--Tap anywhere to continue--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dD-ZG-mJ0">
-                                <rect key="frame" x="220" y="310" width="227" height="21"/>
+                                <rect key="frame" x="255" y="349" width="227" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.9941048996796914" green="1" blue="0.96087101131102315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -60,11 +60,11 @@
                         <viewControllerLayoutGuide type="bottom" id="nxv-lj-ImA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qgB-TC-Ym1">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secondView" translatesAutoresizingMaskIntoConstraints="NO" id="Crl-8m-Xrz">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMY-uo-W83">
                                 <rect key="frame" x="387" y="309.5" width="78" height="36"/>
@@ -73,6 +73,9 @@
                                 <state key="normal" title="SIGN UP">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpToggleMenu:" destination="zmA-Ye-MxX" eventType="touchUpInside" id="RML-5x-MnP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ob-fA-W3t">
                                 <rect key="frame" x="182" y="309" width="71" height="36"/>
@@ -81,9 +84,12 @@
                                 <state key="normal" title="SIGN IN">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="signInToggleMenu:" destination="zmA-Ye-MxX" eventType="touchUpInside" id="Rtv-pe-uNO"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="缘定菁园" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoA-kb-bnp">
-                                <rect key="frame" x="265" y="38" width="136" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="菁华烟云" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoA-kb-bnp">
+                                <rect key="frame" x="300" y="38" width="136" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="nfs-1G-4uu"/>
                                 </constraints>
@@ -92,11 +98,15 @@
                                 <color key="highlightedColor" red="0.21375934429999999" green="0.34630379529999999" blue="0.95377266839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="shadowColor" red="0.76977715619999998" green="1" blue="0.16987739930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="login card" translatesAutoresizingMaskIntoConstraints="NO" id="vw3-IM-Esj" userLabel="Student Card">
+                                <rect key="frame" x="2" y="-455" width="790" height="455"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CoA-kb-bnp" firstAttribute="centerX" secondItem="qgB-TC-Ym1" secondAttribute="centerX" id="44Z-wd-q2e"/>
                             <constraint firstAttribute="trailing" secondItem="Crl-8m-Xrz" secondAttribute="trailing" id="8of-ey-b3o"/>
+                            <constraint firstItem="Crl-8m-Xrz" firstAttribute="top" secondItem="vw3-IM-Esj" secondAttribute="bottom" id="BHX-jV-swm"/>
                             <constraint firstItem="nxv-lj-ImA" firstAttribute="top" secondItem="Crl-8m-Xrz" secondAttribute="bottom" id="EVs-Qd-Pwf"/>
                             <constraint firstItem="Crl-8m-Xrz" firstAttribute="leading" secondItem="qgB-TC-Ym1" secondAttribute="leading" id="EcO-Q2-SbF"/>
                             <constraint firstItem="CoA-kb-bnp" firstAttribute="top" secondItem="0k3-0B-ggA" secondAttribute="bottom" constant="18" id="v6Q-qR-Bqp"/>
@@ -104,17 +114,20 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="SignUpButton" destination="IMY-uo-W83" id="7tQ-1J-pqe"/>
+                        <outlet property="secondView" destination="Crl-8m-Xrz" id="q1f-cc-uAB"/>
                         <outlet property="signInButton" destination="0Ob-fA-W3t" id="5oE-Vy-313"/>
+                        <outlet property="signUpButton" destination="IMY-uo-W83" id="IYG-b3-Lb8"/>
+                        <outlet property="studentCard" destination="vw3-IM-Esj" id="2Mv-h5-ZaX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ENs-yd-VjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="682.3088455772114" y="1148"/>
+            <point key="canvasLocation" x="689.5052473763119" y="1548"/>
         </scene>
     </scenes>
     <resources>
         <image name="Login" width="4137" height="2036"/>
+        <image name="login card" width="794" height="455"/>
         <image name="secondView" width="1920" height="1080"/>
     </resources>
 </document>
