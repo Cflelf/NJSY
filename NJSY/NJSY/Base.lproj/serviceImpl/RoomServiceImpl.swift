@@ -58,5 +58,17 @@ class RoomServiceImpl:RoomService{
         }
     }
     
+    public func getRoomByType(roomType:String) -> [RoomVO]?{
+        var roomVOList = [RoomVO]()
+        if let roomPOList = roomDao.getRoomByType(roomType: roomType){
+            for roomPO in roomPOList{
+                roomVOList.append(RoomVO(roomPO: roomPO))
+            }
+            return roomVOList
+        }else{
+            return nil
+        }
+    }
+    
     
 }

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,34 +22,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userMain" translatesAutoresizingMaskIntoConstraints="NO" id="hsg-B4-YXO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userMain" translatesAutoresizingMaskIntoConstraints="NO" id="F1b-bM-BFd">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pxr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVy-JA-OLZ">
-                                <rect key="frame" x="263" y="34" width="78" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVP-Ww-Gch">
-                                <rect key="frame" x="56" y="157" width="176" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="EnterRoom:" destination="3q5-qQ-Q16" eventType="touchUpInside" id="eFn-8S-PBW"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NJLogo" translatesAutoresizingMaskIntoConstraints="NO" id="c4R-9U-2gY">
+                                <rect key="frame" x="417" y="42" width="250" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="8Gq-40-HBm"/>
+                                    <constraint firstAttribute="width" secondItem="c4R-9U-2gY" secondAttribute="height" multiplier="589:113" id="fZ4-VQ-gWH"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YEL-QK-PHX" firstAttribute="top" secondItem="hsg-B4-YXO" secondAttribute="bottom" id="3dC-jc-7Fd"/>
-                            <constraint firstItem="hsg-B4-YXO" firstAttribute="leading" secondItem="1KY-jz-F1V" secondAttribute="leading" id="7Rl-10-O9u"/>
-                            <constraint firstAttribute="trailing" secondItem="hsg-B4-YXO" secondAttribute="trailing" id="DPx-L4-mGz"/>
-                            <constraint firstItem="hsg-B4-YXO" firstAttribute="top" secondItem="1KY-jz-F1V" secondAttribute="top" id="mme-Ad-Rtv"/>
+                            <constraint firstItem="c4R-9U-2gY" firstAttribute="top" secondItem="u1W-yV-A0t" secondAttribute="bottom" constant="22" id="2tT-Yh-2Ug"/>
+                            <constraint firstItem="F1b-bM-BFd" firstAttribute="leading" secondItem="1KY-jz-F1V" secondAttribute="leading" id="86O-38-2KB"/>
+                            <constraint firstItem="F1b-bM-BFd" firstAttribute="top" secondItem="1KY-jz-F1V" secondAttribute="top" id="EXO-b6-jqp"/>
+                            <constraint firstItem="YEL-QK-PHX" firstAttribute="top" secondItem="F1b-bM-BFd" secondAttribute="bottom" id="QUq-Ci-8br"/>
+                            <constraint firstAttribute="trailing" secondItem="F1b-bM-BFd" secondAttribute="trailing" id="ZMY-5k-kyl"/>
+                            <constraint firstAttribute="trailing" secondItem="c4R-9U-2gY" secondAttribute="trailing" id="kVZ-sN-oXA"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="userNameLabel" destination="vVy-JA-OLZ" id="O5b-Vx-OCh"/>
+                        <outlet property="NJLogo" destination="c4R-9U-2gY" id="TgY-AR-Lep"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a6I-Rt-frn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -57,6 +53,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NJLogo" width="589" height="113"/>
         <image name="userMain" width="1246" height="700"/>
     </resources>
 </document>
