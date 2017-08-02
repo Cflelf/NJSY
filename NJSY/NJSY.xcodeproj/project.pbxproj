@@ -29,7 +29,7 @@
 		2E0A862B1F30CFF8005B5540 /* CharacterServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A862A1F30CFF8005B5540 /* CharacterServiceImpl.swift */; };
 		2E0A862D1F30D099005B5540 /* CharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A862C1F30D099005B5540 /* CharacterService.swift */; };
 		2E1867651F26DB8F0057DBFE /* UserMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1867641F26DB8F0057DBFE /* UserMain.storyboard */; };
-		2E1867691F26DF0C0057DBFE /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1867681F26DF0C0057DBFE /* SnapKit.framework */; };
+		2E1867671F26DDA20057DBFE /* UserMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1867661F26DDA20057DBFE /* UserMainController.swift */; };
 		2E52EAEA1F287A3F005E093F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E52EAE91F287A3F005E093F /* SecondViewController.swift */; };
 		2E6904BF1F2ED05A008ACB6D /* paperfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E6904BE1F2ED05A008ACB6D /* paperfont.ttf */; };
 		2E6904C11F2EE9C5008ACB6D /* RoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6904C01F2EE9C5008ACB6D /* RoomListViewController.swift */; };
@@ -46,6 +46,8 @@
 		A95AE6DA1F1BA6E800590E99 /* NJSYTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6D91F1BA6E800590E99 /* NJSYTests.swift */; };
 		A95AE6E51F1BA6E800590E99 /* NJSYUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6E41F1BA6E800590E99 /* NJSYUITests.swift */; };
 		A95AE6F31F1BA7B400590E99 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A95AE6F21F1BA7B400590E99 /* Podfile */; };
+		CA961DF11F27718D002267E8 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		CAA5D7ED1F2886A900BC638B /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA5D7EC1F2886A900BC638B /* SnapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,7 @@
 		A95AE6E41F1BA6E800590E99 /* NJSYUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NJSYUITests.swift; sourceTree = "<group>"; };
 		A95AE6E61F1BA6E800590E99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A95AE6F21F1BA7B400590E99 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CAA5D7EC1F2886A900BC638B /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = "Pods/../build/Debug-iphoneos/SnapKit.framework"; sourceTree = "<group>"; };
 		F20A5EC22CCB137E67ADD359 /* Pods_NJSY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NJSY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -120,7 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E1867691F26DF0C0057DBFE /* SnapKit.framework in Frameworks */,
+				CAA5D7ED1F2886A900BC638B /* SnapKit.framework in Frameworks */,
 				2E0448B91F21F73500207D73 /* LeanCloud.framework in Frameworks */,
 				17A84162E64155CFD8B410FF /* Pods_NJSY.framework in Frameworks */,
 			);
@@ -146,6 +149,7 @@
 		2DFBC6EA35CC8BC7AACF438A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CAA5D7EC1F2886A900BC638B /* SnapKit.framework */,
 				2E1867681F26DF0C0057DBFE /* SnapKit.framework */,
 				2E0448B81F21F73500207D73 /* LeanCloud.framework */,
 				F20A5EC22CCB137E67ADD359 /* Pods_NJSY.framework */,
@@ -669,6 +673,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2V9KC3D3QY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = NJSY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pxr.NJSY;
@@ -683,6 +691,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2V9KC3D3QY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = NJSY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pxr.NJSY;
