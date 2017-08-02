@@ -7,7 +7,7 @@
 //
 
 protocol BattleDao{
-    func startBattle(roomId:Int) -> BattlePO?
+    func createBattle(roomId:Int) -> BattlePO?
     
     func upDateBattleInfo(battlePO:BattlePO) ->String
 }

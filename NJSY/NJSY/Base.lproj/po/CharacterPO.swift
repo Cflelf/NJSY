@@ -8,8 +8,16 @@
 
 class CharacterPO{
     private var name:String!
+    private var id:Int!
+    private var blood:Int!
     
-    init(name:String) {
+    init(name:String,id:Int,blood:Int) {
         self.name = name
+        self.id = id
+        self.blood = blood
     }
+    
+    func getName()->String{return self.name}
+    func getId()->Int{return self.id}
+    func getBlood()->Int{return self.blood}
 }

@@ -9,14 +9,18 @@
 //一局对战的信息
 class BattlePO{
     private var roomId:Int!
-    private var characterList:[String:String]!
+    private var characterList:[String:Int]!
+    private var round:Int!
     
-    init(roomId:Int,characterList:[String:String]) {
+    init(roomId:Int,characterList:[String:Int],round:Int) {
         self.roomId = roomId
         self.characterList = characterList
+        self.round = round
     }
     
     func getRoomId() -> Int{return self.roomId}
-    func getCharacterList() -> [String:String]{return self.characterList}
-    func setCharacterList(characterList:[String:String]){self.characterList = characterList}
+    func getCharacterList() -> [String:Int]{return self.characterList}
+    func getRound()->Int{return self.round}
+    func setRound(round:Int){self.round = round}
+    func setCharacterList(characterList:[String:Int]){self.characterList = characterList}
 }

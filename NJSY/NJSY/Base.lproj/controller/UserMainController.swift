@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import LeanCloud
 
 class UserMainController:UIViewController,UITableViewDelegate,UITableViewDataSource{
     
@@ -22,9 +23,7 @@ class UserMainController:UIViewController,UITableViewDelegate,UITableViewDataSou
     var ruleButton:UIButton!
     var exitButton:UIButton!
     var nameLabel:UILabel!
-    
     var gameMode:String = "1V1"
-    
     private var roomService:RoomService!
     
     override func viewDidLoad() {
