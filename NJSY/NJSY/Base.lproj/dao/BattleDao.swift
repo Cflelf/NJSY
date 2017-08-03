@@ -9,5 +9,7 @@
 protocol BattleDao{
     func createBattle(roomId:Int) -> BattlePO?
     
-    func upDateBattleInfo(battlePO:BattlePO) ->String
+    func updateBattleInfo(battlePO:BattlePO) ->String
+    
+    func getBattleByRoomId(roomId:Int) -> BattlePO?
 }

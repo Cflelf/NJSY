@@ -25,17 +25,38 @@ class BattleDaoImpl:BattleDao{
         }
     }
     
-    func upDateBattleInfo(battlePO: BattlePO) -> String {
+    func updateBattleInfo(battlePO: BattlePO) -> String {
         if let battle = getBattleLCObject(roomID: battlePO.getRoomId()){
-            let result = LCCQLClient.execute("update Battle set round = \(battlePO.getRound()),CharacterList = \(battlePO.getCharacterList()))where objectId = '\(battle.objectId)'")
+            let object = LCObject(className: "Battle", objectId: "\(battle.objectId!.stringValue!)")
+            object.set("Round",value: battlePO.getRound())
+            object.set("CharacterList",value: battlePO.getCharacterList())
+            let result = object.save()
             switch result {
             case .success:
                 return "update battle success"
-            default:
-                return "network error"
+            case .failure(let error):
+                return error.reason!
             }
         }else{
             return "no such battle"
+        }
+    }
+    
+    func getBattleByRoomId(roomId:Int) -> BattlePO?{
+        if let battle = getBattleLCObject(roomID: roomId){
+            if battle.get("CharacterList")?.dictionaryValue?.count != 0{
+                var characterDictionary = [String:Int]()
+                let characterList = battle.get("CharacterList")!
+                for character in (characterList.dictionaryValue!.keys){
+                    let lcNumber = (characterList.dictionaryValue![character])?.lcValue
+                    characterDictionary[character] = Int((lcNumber as! LCNumber).value)
+                }
+            return BattlePO(roomId: roomId, characterList: characterDictionary, round: (battle.get("Round")?.intValue)!)
+            }else{
+                return BattlePO(roomId: roomId, characterList: [String : Int](), round: (battle.get("Round")?.intValue)!)
+            }
+        }else{
+            return nil
         }
     }
     

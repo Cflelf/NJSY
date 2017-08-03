@@ -8,4 +8,5 @@
 
 protocol CharacterDao {
     func getAllCharacters()->Array<CharacterPO>
+    func getCharacterById(id:Int)->CharacterPO?
 }

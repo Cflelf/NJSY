@@ -29,7 +29,6 @@
 		2E0A862B1F30CFF8005B5540 /* CharacterServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A862A1F30CFF8005B5540 /* CharacterServiceImpl.swift */; };
 		2E0A862D1F30D099005B5540 /* CharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A862C1F30D099005B5540 /* CharacterService.swift */; };
 		2E1867651F26DB8F0057DBFE /* UserMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1867641F26DB8F0057DBFE /* UserMain.storyboard */; };
-		2E1867671F26DDA20057DBFE /* UserMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1867661F26DDA20057DBFE /* UserMainController.swift */; };
 		2E52EAEA1F287A3F005E093F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E52EAE91F287A3F005E093F /* SecondViewController.swift */; };
 		2E6904BF1F2ED05A008ACB6D /* paperfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E6904BE1F2ED05A008ACB6D /* paperfont.ttf */; };
 		2E6904C11F2EE9C5008ACB6D /* RoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6904C01F2EE9C5008ACB6D /* RoomListViewController.swift */; };
@@ -40,13 +39,14 @@
 		2E7694EA1F20AFA5007E5157 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694E91F20AFA5007E5157 /* InitialViewController.swift */; };
 		2E7694EC1F20B017007E5157 /* RoomPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694EB1F20B017007E5157 /* RoomPO.swift */; };
 		2EBD69B61F232A4D00726771 /* BattlePO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD69B51F232A4D00726771 /* BattlePO.swift */; };
+		2EEC63811F32CF650069B255 /* BattleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEC63801F32CF650069B255 /* BattleService.swift */; };
+		2EEC63831F32CFC50069B255 /* BattleServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEC63821F32CFC50069B255 /* BattleServiceImpl.swift */; };
 		A95AE6BF1F1BA6E800590E99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6BE1F1BA6E800590E99 /* AppDelegate.swift */; };
 		A95AE6C51F1BA6E800590E99 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6C41F1BA6E800590E99 /* GameScene.swift */; };
 		A95AE6CC1F1BA6E800590E99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95AE6CB1F1BA6E800590E99 /* Assets.xcassets */; };
 		A95AE6DA1F1BA6E800590E99 /* NJSYTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6D91F1BA6E800590E99 /* NJSYTests.swift */; };
 		A95AE6E51F1BA6E800590E99 /* NJSYUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6E41F1BA6E800590E99 /* NJSYUITests.swift */; };
 		A95AE6F31F1BA7B400590E99 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A95AE6F21F1BA7B400590E99 /* Podfile */; };
-		CA961DF11F27718D002267E8 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		CAA5D7ED1F2886A900BC638B /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA5D7EC1F2886A900BC638B /* SnapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +101,8 @@
 		2E7694E91F20AFA5007E5157 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InitialViewController.swift; path = Base.lproj/controller/InitialViewController.swift; sourceTree = "<group>"; };
 		2E7694EB1F20B017007E5157 /* RoomPO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomPO.swift; path = Base.lproj/po/RoomPO.swift; sourceTree = "<group>"; };
 		2EBD69B51F232A4D00726771 /* BattlePO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BattlePO.swift; path = Base.lproj/po/BattlePO.swift; sourceTree = "<group>"; };
+		2EEC63801F32CF650069B255 /* BattleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BattleService.swift; path = Base.lproj/service/BattleService.swift; sourceTree = "<group>"; };
+		2EEC63821F32CFC50069B255 /* BattleServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BattleServiceImpl.swift; path = Base.lproj/serviceImpl/BattleServiceImpl.swift; sourceTree = "<group>"; };
 		96DFE8D3F0C5FCA9D4EBDE86 /* Pods-NJSY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJSY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NJSY/Pods-NJSY.debug.xcconfig"; sourceTree = "<group>"; };
 		A95AE6BB1F1BA6E800590E99 /* NJSY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NJSY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95AE6BE1F1BA6E800590E99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -161,8 +163,9 @@
 			isa = PBXGroup;
 			children = (
 				2E0651161F2185D40087592A /* RoomServiceImpl.swift */,
-				2E0651171F2185D40087592A /* UserServiceImpl.swift */,
 				2E0A862A1F30CFF8005B5540 /* CharacterServiceImpl.swift */,
+				2E0651171F2185D40087592A /* UserServiceImpl.swift */,
+				2EEC63821F32CFC50069B255 /* BattleServiceImpl.swift */,
 			);
 			name = serviceImpl;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				2E0A862C1F30D099005B5540 /* CharacterService.swift */,
 				2E06511C1F2188F60087592A /* UserService.swift */,
 				2E06511E1F2189100087592A /* RoomService.swift */,
+				2EEC63801F32CF650069B255 /* BattleService.swift */,
 			);
 			name = service;
 			sourceTree = "<group>";
@@ -278,12 +282,12 @@
 			children = (
 				2E6904BB1F2ECF3A008ACB6D /* SupportingFiles */,
 				2E06510F1F2184ED0087592A /* daoImpl */,
+				A9257E8D1F1E4C6100F3F4C1 /* dao */,
 				2E06510E1F2184E10087592A /* serviceImpl */,
+				A9257E8B1F1E4C4200F3F4C1 /* service */,
 				A9257E911F1E5DE200F3F4C1 /* vo */,
 				A9257E8E1F1E4C6700F3F4C1 /* view */,
-				A9257E8D1F1E4C6100F3F4C1 /* dao */,
 				A9257E8C1F1E4C4E00F3F4C1 /* po */,
-				A9257E8B1F1E4C4200F3F4C1 /* service */,
 				A9257E8A1F1E4C3A00F3F4C1 /* controller */,
 				A95AE6BE1F1BA6E800590E99 /* AppDelegate.swift */,
 				A95AE6C41F1BA6E800590E99 /* GameScene.swift */,
@@ -514,6 +518,8 @@
 				2E52EAEA1F287A3F005E093F /* SecondViewController.swift in Sources */,
 				2E06511D1F2188F60087592A /* UserService.swift in Sources */,
 				2E0448B11F21AD8400207D73 /* RoomVO.swift in Sources */,
+				2EEC63831F32CFC50069B255 /* BattleServiceImpl.swift in Sources */,
+				2EEC63811F32CF650069B255 /* BattleService.swift in Sources */,
 				2E0651151F2185C50087592A /* UserDaoImpl.swift in Sources */,
 				A95AE6C51F1BA6E800590E99 /* GameScene.swift in Sources */,
 				2E0A862B1F30CFF8005B5540 /* CharacterServiceImpl.swift in Sources */,

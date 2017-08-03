@@ -32,6 +32,9 @@ class UserMainController:UIViewController,UITableViewDelegate,UITableViewDataSou
         modeTable.delegate = self
         modeTable.dataSource = self
         self.roomService = RoomServiceImpl()
+        
+//        let servie = BattleServiceImpl()
+//        print(servie.chooseCharacter(roomId: 1, userId: "pxr", characterId: 1))
     }
     
     override func didReceiveMemoryWarning() {

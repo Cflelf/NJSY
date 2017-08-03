@@ -11,9 +11,19 @@ class CharacterDaoImpl:CharacterDao{
         let data = NSDictionary(contentsOfFile: Bundle.main.path(forResource: "Character", ofType: "plist")!)
         var array = Array<CharacterPO>()
         for key in (data?.allKeys)!{
-            array.append(CharacterPO(name: (data?.value(forKey: key as! String) as! Dictionary)["name"]!, id: key as! Int, blood: (data?.value(forKey: key as! String) as! Dictionary)["blodd"]!))
+            array.append(CharacterPO(name: (data?[key] as! Dictionary<String, Any>)["name"] as! String, id: key as! Int, blood: (data?[key] as! Dictionary<String, Any>)["blood"] as! Int))
         }
         print(array.count)
         return array
+    }
+    
+    func getCharacterById(id:Int)->CharacterPO?{
+        let data = NSDictionary(contentsOfFile: Bundle.main.path(forResource: "Character", ofType: "plist")!)
+        for key in (data?.allKeys)!{
+            if key as! Int == id{
+                return CharacterPO(name: (data?[key] as! Dictionary<String, Any>)["name"] as! String, id: key as! Int, blood: (data?[key] as! Dictionary<String, Any>)["blood"] as! Int)
+            }
+        }
+        return nil
     }
 }
