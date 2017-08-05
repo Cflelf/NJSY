@@ -98,15 +98,33 @@
                                 <color key="highlightedColor" red="0.21375934429999999" green="0.34630379529999999" blue="0.95377266839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="shadowColor" red="0.76977715619999998" green="1" blue="0.16987739930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="login card" translatesAutoresizingMaskIntoConstraints="NO" id="vw3-IM-Esj" userLabel="Student Card">
-                                <rect key="frame" x="2" y="-455" width="790" height="455"/>
-                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jmn-Lb-ykN">
+                                <rect key="frame" x="104" y="101" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="95d-4m-SDC">
+                                <rect key="frame" x="169" y="227" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oa5-4g-8Qn">
+                                <rect key="frame" x="300" y="376" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="login">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CoA-kb-bnp" firstAttribute="centerX" secondItem="qgB-TC-Ym1" secondAttribute="centerX" id="44Z-wd-q2e"/>
                             <constraint firstAttribute="trailing" secondItem="Crl-8m-Xrz" secondAttribute="trailing" id="8of-ey-b3o"/>
-                            <constraint firstItem="Crl-8m-Xrz" firstAttribute="top" secondItem="vw3-IM-Esj" secondAttribute="bottom" id="BHX-jV-swm"/>
                             <constraint firstItem="nxv-lj-ImA" firstAttribute="top" secondItem="Crl-8m-Xrz" secondAttribute="bottom" id="EVs-Qd-Pwf"/>
                             <constraint firstItem="Crl-8m-Xrz" firstAttribute="leading" secondItem="qgB-TC-Ym1" secondAttribute="leading" id="EcO-Q2-SbF"/>
                             <constraint firstItem="CoA-kb-bnp" firstAttribute="top" secondItem="0k3-0B-ggA" secondAttribute="bottom" constant="18" id="v6Q-qR-Bqp"/>
@@ -114,20 +132,38 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="accountTextField" destination="jmn-Lb-ykN" id="XJK-s8-igY"/>
+                        <outlet property="loginButton" destination="oa5-4g-8Qn" id="bEW-MV-qQQ"/>
+                        <outlet property="passwordTextField" destination="95d-4m-SDC" id="CzZ-Pu-kV2"/>
                         <outlet property="secondView" destination="Crl-8m-Xrz" id="q1f-cc-uAB"/>
                         <outlet property="signInButton" destination="0Ob-fA-W3t" id="5oE-Vy-313"/>
                         <outlet property="signUpButton" destination="IMY-uo-W83" id="IYG-b3-Lb8"/>
-                        <outlet property="studentCard" destination="vw3-IM-Esj" id="2Mv-h5-ZaX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ENs-yd-VjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="689.5052473763119" y="1548"/>
+            <point key="canvasLocation" x="688.85869565217399" y="1547.8260869565217"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7Ec-YP-z9X">
+            <objects>
+                <viewController id="myd-Sh-OQ4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Czs-3O-WOc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ddg-bh-4Rx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ceJ-Xp-GqT">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E0b-Qf-Te9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
         <image name="Login" width="4137" height="2036"/>
-        <image name="login card" width="794" height="455"/>
         <image name="secondView" width="1920" height="1080"/>
     </resources>
 </document>

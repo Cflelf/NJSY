@@ -41,6 +41,8 @@
 		2EBD69B61F232A4D00726771 /* BattlePO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD69B51F232A4D00726771 /* BattlePO.swift */; };
 		2EEC63811F32CF650069B255 /* BattleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEC63801F32CF650069B255 /* BattleService.swift */; };
 		2EEC63831F32CFC50069B255 /* BattleServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEC63821F32CFC50069B255 /* BattleServiceImpl.swift */; };
+		2EEC63851F35891C0069B255 /* Room.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EEC63841F35891C0069B255 /* Room.storyboard */; };
+		2EEC63871F3596290069B255 /* Card.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EEC63861F3596290069B255 /* Card.plist */; };
 		A95AE6BF1F1BA6E800590E99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6BE1F1BA6E800590E99 /* AppDelegate.swift */; };
 		A95AE6C51F1BA6E800590E99 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6C41F1BA6E800590E99 /* GameScene.swift */; };
 		A95AE6CC1F1BA6E800590E99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95AE6CB1F1BA6E800590E99 /* Assets.xcassets */; };
@@ -103,6 +105,8 @@
 		2EBD69B51F232A4D00726771 /* BattlePO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BattlePO.swift; path = Base.lproj/po/BattlePO.swift; sourceTree = "<group>"; };
 		2EEC63801F32CF650069B255 /* BattleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BattleService.swift; path = Base.lproj/service/BattleService.swift; sourceTree = "<group>"; };
 		2EEC63821F32CFC50069B255 /* BattleServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BattleServiceImpl.swift; path = Base.lproj/serviceImpl/BattleServiceImpl.swift; sourceTree = "<group>"; };
+		2EEC63841F35891C0069B255 /* Room.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Room.storyboard; path = Base.lproj/view/Room.storyboard; sourceTree = "<group>"; };
+		2EEC63861F3596290069B255 /* Card.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Card.plist; path = Base.lproj/SupportingFiles/Card.plist; sourceTree = "<group>"; };
 		96DFE8D3F0C5FCA9D4EBDE86 /* Pods-NJSY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJSY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NJSY/Pods-NJSY.debug.xcconfig"; sourceTree = "<group>"; };
 		A95AE6BB1F1BA6E800590E99 /* NJSY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NJSY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95AE6BE1F1BA6E800590E99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 			children = (
 				2E6904BE1F2ED05A008ACB6D /* paperfont.ttf */,
 				2E0A861E1F2F050C005B5540 /* Character.plist */,
+				2EEC63861F3596290069B255 /* Card.plist */,
 			);
 			name = SupportingFiles;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 			children = (
 				2E7694DF1F20AF77007E5157 /* Main.storyboard */,
 				2E1867641F26DB8F0057DBFE /* UserMain.storyboard */,
+				2EEC63841F35891C0069B255 /* Room.storyboard */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -441,7 +447,9 @@
 				2E7694E01F20AF77007E5157 /* Main.storyboard in Resources */,
 				A95AE6F31F1BA7B400590E99 /* Podfile in Resources */,
 				2E1867651F26DB8F0057DBFE /* UserMain.storyboard in Resources */,
+				2EEC63851F35891C0069B255 /* Room.storyboard in Resources */,
 				2E6904BF1F2ED05A008ACB6D /* paperfont.ttf in Resources */,
+				2EEC63871F3596290069B255 /* Card.plist in Resources */,
 				A95AE6CC1F1BA6E800590E99 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

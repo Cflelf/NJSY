@@ -5,8 +5,21 @@
 	<key>1</key>
 	<dict>
 		<key>specialSkill</key>
+		<string></string>
+		<key>basicSkill</key>
+		<string></string>
+		<key>point</key>
+		<integer>3</integer>
+		<key>blood</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>mason</string>
+	</dict>
+	<key>0</key>
+	<dict>
+		<key>specialSkill</key>
 		<string>skill2</string>
-		<key>normalSkill</key>
+		<key>basicSkill</key>
 		<string>skill1</string>
 		<key>point</key>
 		<integer>3</integer>

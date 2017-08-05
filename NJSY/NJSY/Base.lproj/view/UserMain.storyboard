@@ -13,7 +13,7 @@
         <!--User Main Controller-->
         <scene sceneID="ekx-G0-dNs">
             <objects>
-                <viewController wantsFullScreenLayout="YES" id="3q5-qQ-Q16" customClass="UserMainController" customModule="NJSY" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserMain" wantsFullScreenLayout="YES" id="3q5-qQ-Q16" customClass="UserMainController" customModule="NJSY" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u1W-yV-A0t"/>
                         <viewControllerLayoutGuide type="bottom" id="YEL-QK-PHX"/>
