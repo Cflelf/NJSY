@@ -20,6 +20,7 @@ class SecondViewController: UIViewController {
     var studentCardView:UIView!
     
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
     var studentCard:UIImageView!
     
     private var userService:UserService!
@@ -79,6 +80,8 @@ class SecondViewController: UIViewController {
             make.leading.equalTo(signUpButton.snp.trailing).offset(30)
         }
         loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
+        
+        registerButton.addTarget(self, action: #selector(signUp), for: .touchUpInside)
     }
     
     func login(){
@@ -87,6 +90,15 @@ class SecondViewController: UIViewController {
         let destinationViewController = destinationStoryboard.instantiateViewController(withIdentifier: "UserMain")
         self.present(destinationViewController, animated: true, completion: nil)
     }
+    
+    func signUp(){
+        print(userService.register(account: accountTextField.text!, password: passwordTextField.text!))
+        let destinationStoryboard = UIStoryboard(name:"UserMain", bundle: nil)
+        let destinationViewController = destinationStoryboard.instantiateViewController(withIdentifier: "UserMain")
+        self.present(destinationViewController, animated: true, completion: nil)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.

@@ -120,6 +120,13 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8X-WO-yuK">
+                                <rect key="frame" x="457" y="376" width="67" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="register">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -135,6 +142,7 @@
                         <outlet property="accountTextField" destination="jmn-Lb-ykN" id="XJK-s8-igY"/>
                         <outlet property="loginButton" destination="oa5-4g-8Qn" id="bEW-MV-qQQ"/>
                         <outlet property="passwordTextField" destination="95d-4m-SDC" id="CzZ-Pu-kV2"/>
+                        <outlet property="registerButton" destination="j8X-WO-yuK" id="laE-nr-EAO"/>
                         <outlet property="secondView" destination="Crl-8m-Xrz" id="q1f-cc-uAB"/>
                         <outlet property="signInButton" destination="0Ob-fA-W3t" id="5oE-Vy-313"/>
                         <outlet property="signUpButton" destination="IMY-uo-W83" id="IYG-b3-Lb8"/>
