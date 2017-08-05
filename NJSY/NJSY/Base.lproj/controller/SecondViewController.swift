@@ -57,6 +57,11 @@ class SecondViewController: UIViewController {
             make.top.equalTo(studentCardView.snp.top)
             make.bottom.equalTo(studentCardView.snp.bottom)
         }
+        studentCard.isHidden = true
+        accountTextField.isHidden = true
+        passwordTextField.isHidden = true
+        loginButton.isHidden = true
+        registerButton.isHidden = true
         
         studentCardView.addSubview(accountTextField)
         accountTextField.snp.makeConstraints{(make) -> Void in
@@ -104,6 +109,10 @@ class SecondViewController: UIViewController {
         // Release any cached data, images, etc that aren't in use.
     }
     @IBAction func signInToggleMenu(_ sender: UIButton) {
+        studentCard.isHidden = false
+        accountTextField.isHidden = false
+        passwordTextField.isHidden = false
+        loginButton.isHidden = false
         if studentCardView.transform == .identity {
             UIView.animate(withDuration: 0.3, animations: {
                 self.signInButton.transform = CGAffineTransform(scaleX: 1.5, y:1.5)
@@ -111,6 +120,8 @@ class SecondViewController: UIViewController {
             }) {(true) in
             }
         } else {
+            loginButton.isHidden = true
+            registerButton.isHidden = true
             UIView.animate(withDuration: 0.3, animations: {
                 self.signInButton.transform = .identity
                 self.signUpButton.transform = .identity
@@ -122,6 +133,10 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func signUpToggleMenu(_ sender: UIButton) {
+        studentCard.isHidden = false
+        accountTextField.isHidden = false
+        passwordTextField.isHidden = false
+        registerButton.isHidden = false
         if studentCardView.transform == .identity {
             UIView.animate(withDuration: 0.3, animations: {
                 self.signUpButton.transform = CGAffineTransform(scaleX: 1.5, y:1.5)
@@ -129,6 +144,8 @@ class SecondViewController: UIViewController {
             }) {(true) in
             }
         } else {
+            loginButton.isHidden = true
+            registerButton.isHidden = true
             UIView.animate(withDuration: 0.3, animations: {
                 self.signUpButton.transform = .identity
                 self.signInButton.transform = .identity
