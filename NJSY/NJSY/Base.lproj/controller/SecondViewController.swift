@@ -70,6 +70,7 @@ class SecondViewController: UIViewController {
             make.height.equalTo(self.view.bounds.height*0.16*0.8)
             make.top.equalTo(studentCardView.snp.top).offset(30)
         }
+        accountTextField.placeholder = "Account"
         
         studentCardView.addSubview(passwordTextField)
         passwordTextField.snp.makeConstraints{(make) -> Void in
@@ -78,6 +79,8 @@ class SecondViewController: UIViewController {
             make.height.equalTo(self.view.bounds.height*0.8*0.16)
             make.top.equalTo(accountTextField.snp.bottom).offset(30)
         }
+        passwordTextField.placeholder = "Password"
+        
         loginButton.snp.makeConstraints{(make) -> Void in
             make.centerY.equalTo(signUpButton.snp.centerY)
             make.width.equalTo(50)
@@ -90,17 +93,41 @@ class SecondViewController: UIViewController {
     }
     
     func login(){
-        print(userService.login(account: accountTextField.text!, password: passwordTextField.text!))
+        let loginStatus = userService.login(account: accountTextField.text!, password: passwordTextField.text!)
+        if loginStatus == "\(accountTextField.text!) login success"
+        {
+        
         let destinationStoryboard = UIStoryboard(name:"UserMain", bundle: nil)
         let destinationViewController = destinationStoryboard.instantiateViewController(withIdentifier: "UserMain")
         self.present(destinationViewController, animated: true, completion: nil)
+        }
+        else{
+            //print(loginStatus)
+            //print("Login failed! Please re-enter your account info.")
+            let alertController = UIAlertController(title: loginStatus,
+                message: "Login failed! Please re-enter your account info.", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "close", style: .cancel, handler: nil)
+            alertController.addAction(cancelAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
     func signUp(){
+        if (accountTextField.text != nil && accountTextField.text != "")
+        {
         print(userService.register(account: accountTextField.text!, password: passwordTextField.text!))
         let destinationStoryboard = UIStoryboard(name:"UserMain", bundle: nil)
         let destinationViewController = destinationStoryboard.instantiateViewController(withIdentifier: "UserMain")
         self.present(destinationViewController, animated: true, completion: nil)
+        }
+        else
+        {
+            //print("Invalid arguments! Please re-enter your account info." )
+            let alertController = UIAlertController(title: "Sign up failed!", message: "Invalid account info! Account cannot be empty!", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "re-enter", style: .cancel, handler: nil)
+            alertController.addAction(cancelAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
         
     }
     
