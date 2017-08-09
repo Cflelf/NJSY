@@ -14,6 +14,9 @@ class UserDaoImpl:UserDao{
         let result = LCCQLClient.execute("select * from GameUser where account = '\(account)'")
             switch(result){
             case .success(let user):
+                if user.objects.count == 0 {
+                    return userPO
+                }
                 let password:String = user.objects.first!.get("password")!.stringValue!
                 userPO = UserPO(account: account,password: password)
                 return userPO
