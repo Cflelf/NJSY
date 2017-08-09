@@ -65,7 +65,7 @@ class RoomDaoImpl:RoomDao{
         let roomType = roomLCObject.get("roomType")!.stringValue!
         let roomName = roomLCObject.get("RoomName")!.stringValue!
         var user = roomLCObject.get("UserList")?.arrayValue
-        let master = roomLCObject.get("Master")!.stringValue!
+        var master = roomLCObject.get("Master")?.stringValue
         var userStatus = roomLCObject.get("UserStatus")?.arrayValue
         if user==nil{
             user = Array<String>()
@@ -73,8 +73,11 @@ class RoomDaoImpl:RoomDao{
         if userStatus == nil{
             userStatus = Array<Bool>()
         }
+        if master == nil{
+            master = String("")
+        }
         let limit = roomLCObject.get("limit")!.intValue!
-        let roomPO = RoomPO(limit: limit, id: roomID, roomType: roomType,userList: user as! Array<String>, master: master , userStatus: userStatus as! Array<Bool>,roomName: roomName)
+        let roomPO = RoomPO(limit: limit, id: roomID, roomType: roomType,userList: user as! Array<String>, master: master! , userStatus: userStatus as! Array<Bool>,roomName: roomName)
         return roomPO
     }
     
