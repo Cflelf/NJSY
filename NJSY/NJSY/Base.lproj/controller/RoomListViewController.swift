@@ -26,9 +26,7 @@ class RoomListViewController:UIViewController,UITableViewDelegate,UITableViewDat
         loadTable()
         roomTable.delegate = self
         roomTable.dataSource = self
-        
         roomVOList = roomService.getRoomByType(roomType: self.gameMode!)
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,14 +35,51 @@ class RoomListViewController:UIViewController,UITableViewDelegate,UITableViewDat
     func loadTable(){
         roomListView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
         self.view.addSubview(roomListView)
-        roomListView.backgroundColor = UIColor.white
+//        roomListView.backgroundColor = UIColor.white
+        
+        let background = UIImageView(image: #imageLiteral(resourceName: "roomList"))
+        roomListView.addSubview(background)
+        background.snp.makeConstraints{(make) -> Void in
+            make.trailing.equalTo(0)
+            make.leading.equalTo(0)
+            make.top.equalTo(0)
+            make.bottom.equalTo(0)
+        }
         
         let closeRoomListButton = UIButton(frame: CGRect(x: 10, y: 10, width: 20, height: 20))
         closeRoomListButton.setImage(#imageLiteral(resourceName: "back"), for: .normal)
         closeRoomListButton.addTarget(self, action: #selector(back), for: .touchUpInside)
         roomListView.addSubview(closeRoomListButton)
         
-        roomTable = UITableView(frame:CGRect(x: 0, y: 40, width: roomListView.bounds.width, height: roomListView.bounds.height-40))
+        let roomIdLabel = UILabel()
+        roomIdLabel.font = UIFont(name: "MStiffHei PRC", size: 25)
+        roomIdLabel.text = "房间号"
+        roomListView.addSubview(roomIdLabel)
+        roomIdLabel.snp.makeConstraints{(make) -> Void in
+            make.top.equalTo(closeRoomListButton.snp.bottom).offset(20)
+            make.leading.equalTo(closeRoomListButton.snp.trailing).offset(20)
+        }
+        
+        let peopleNumLabel = UILabel()
+        peopleNumLabel.text = "人数"
+        peopleNumLabel.font = UIFont(name: "MStiffHei PRC", size: 25)
+        roomListView.addSubview(peopleNumLabel)
+        peopleNumLabel.snp.makeConstraints{(make) -> Void in
+            make.centerY.equalTo(roomIdLabel.snp.centerY)
+            make.centerX.equalTo(self.view.snp.centerX)
+        }
+        
+        let statusLabel = UILabel()
+        statusLabel.text = "状态"
+        statusLabel.font = UIFont(name: "MStiffHei PRC", size: 25)
+        roomListView.addSubview(statusLabel)
+        statusLabel.snp.makeConstraints{(make) -> Void in
+            make.centerY.equalTo(roomIdLabel.snp.centerY)
+            make.trailing.equalTo(-50)
+        }
+        
+        roomTable = UITableView(frame:CGRect(x: 0, y: 80, width: roomListView.bounds.width, height: roomListView.bounds.height-80))
+        roomTable.backgroundColor = UIColor.clear
         roomListView.addSubview(roomTable)
         
     }
@@ -59,19 +94,22 @@ class RoomListViewController:UIViewController,UITableViewDelegate,UITableViewDat
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0)
         if let roomVOList = roomService.getRoomByType(roomType: self.gameMode!){
-            cell.textLabel?.text = String(roomVOList[indexPath.row].roomId)
-            cell.textLabel?.textAlignment = NSTextAlignment.left
-            
+            cell.backgroundColor = UIColor.clear
+            let roomNum = UILabel()
+            roomNum.text = "\(indexPath.row)"
+            cell.contentView.addSubview(roomNum)
+            roomNum.snp.makeConstraints{(make) -> Void in
+                make.leading.equalTo(50)
+                make.centerY.equalTo(cell.snp.centerY)
+            }
             let roomName = UILabel()
             roomName.text = roomVOList[indexPath.row].roomName
             roomName.textAlignment = NSTextAlignment.center
             cell.contentView.addSubview(roomName)
             
             roomName.snp.makeConstraints{(make) -> Void in
-                make.centerY.equalTo((cell.textLabel?.snp.centerY)!)
-                make.centerX.equalTo(cell.snp.centerX).offset(-30)
-                make.width.equalTo(170)
-                make.height.equalTo(20)
+                make.centerY.equalTo(roomNum.snp.centerY)
+                make.centerX.equalTo(cell.snp.centerX)
             }
             
             let maxNum = 5
@@ -81,10 +119,8 @@ class RoomListViewController:UIViewController,UITableViewDelegate,UITableViewDat
             cell.contentView.addSubview(roomPeopleNum)
             
             roomPeopleNum.snp.makeConstraints{(make) -> Void in
-                make.centerY.equalTo((cell.textLabel?.snp.centerY)!)
-                make.trailing.equalTo(-30)
-                make.width.equalTo(29)
-                make.height.equalTo(20)
+                make.centerY.equalTo(roomNum.snp.centerY)
+                make.trailing.equalTo(-50)
             }
         }
         return cell
