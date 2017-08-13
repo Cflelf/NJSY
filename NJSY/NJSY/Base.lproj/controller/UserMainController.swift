@@ -188,9 +188,9 @@ class UserMainController:UIViewController,UITableViewDelegate,UITableViewDataSou
         accountLabel.font = UIFont(name: "MStiffHei PRC", size: 25)
         accountLabel.textColor = UIColor.black
         accountLabel.snp.makeConstraints{(make) -> Void in
-            make.height.equalTo(20)
+            make.height.equalTo(30)
             make.centerX.equalTo(self.view.snp.centerX)
-            make.top.equalTo(32)
+            make.top.equalTo(27)
         }
 
         accountLabel.adjustsFontSizeToFitWidth = true
