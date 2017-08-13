@@ -98,7 +98,10 @@ class SecondViewController: UIViewController {
         {
         
         let destinationStoryboard = UIStoryboard(name:"UserMain", bundle: nil)
-        let destinationViewController = destinationStoryboard.instantiateViewController(withIdentifier: "UserMain")
+        let destinationViewController = destinationStoryboard.instantiateViewController(withIdentifier: "UserMain") as! UserMainController
+        destinationViewController.accountString = accountTextField.text!
+
+
         self.present(destinationViewController, animated: true, completion: nil)
         }
         else{
