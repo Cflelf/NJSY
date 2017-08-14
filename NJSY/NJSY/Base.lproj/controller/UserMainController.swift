@@ -25,9 +25,13 @@ class UserMainController:UIViewController,UITableViewDelegate,UITableViewDataSou
     var nameLabel:UILabel!
     var gameMode:String = "1V1"
     private var roomService:RoomService!
+    @IBOutlet weak var accountLabel: UILabel!
+    var accountString:String = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setAccountLabel()
         loadButton()
         modeTable.delegate = self
         modeTable.dataSource = self
@@ -169,13 +173,28 @@ class UserMainController:UIViewController,UITableViewDelegate,UITableViewDataSou
             make.centerX.equalTo(self.view.snp.centerX)
             make.top.equalTo(nameLabel.snp.bottom).offset(30)
         }
-        nameLabel.adjustsFontSizeToFitWidth = true
+        gameNameLabel.adjustsFontSizeToFitWidth = true
     }
     
     func showRoomList(){
         let roomController = RoomListViewController()
         roomController.gameMode = self.gameMode
         self.showDetailViewController(roomController, sender: nil)
+    }
+    
+    func setAccountLabel(){
+        self.accountLabel.text! = accountString
+        self.view.addSubview(accountLabel)
+        accountLabel.font = UIFont(name: "MStiffHei PRC", size: 25)
+        accountLabel.textColor = UIColor.black
+        accountLabel.snp.makeConstraints{(make) -> Void in
+            make.height.equalTo(30)
+            make.centerX.equalTo(self.view.snp.centerX)
+            make.top.equalTo(27)
+        }
+
+        accountLabel.adjustsFontSizeToFitWidth = true
+
     }
     
 }
