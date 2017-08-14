@@ -32,6 +32,7 @@ class RoomListViewController:UIViewController,UITableViewDelegate,UITableViewDat
     override func didReceiveMemoryWarning() {
         
     }
+    
     func loadTable(){
         roomListView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
         self.view.addSubview(roomListView)
@@ -132,5 +133,11 @@ class RoomListViewController:UIViewController,UITableViewDelegate,UITableViewDat
     
     func back(){
         dismiss(animated: true, completion: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let destinationStoryboard = UIStoryboard(name:"Room", bundle: nil)
+        let destinationViewController = destinationStoryboard.instantiateViewController(withIdentifier: "Room")
+        self.present(destinationViewController, animated: true, completion: nil)
     }
 }

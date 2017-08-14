@@ -43,6 +43,7 @@
 		2EEC63831F32CFC50069B255 /* BattleServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEC63821F32CFC50069B255 /* BattleServiceImpl.swift */; };
 		2EEC63851F35891C0069B255 /* Room.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EEC63841F35891C0069B255 /* Room.storyboard */; };
 		2EEC63871F3596290069B255 /* Card.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EEC63861F3596290069B255 /* Card.plist */; };
+		2EEC63891F3AF9760069B255 /* RoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEC63881F3AF9760069B255 /* RoomController.swift */; };
 		A95AE6BF1F1BA6E800590E99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6BE1F1BA6E800590E99 /* AppDelegate.swift */; };
 		A95AE6C51F1BA6E800590E99 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95AE6C41F1BA6E800590E99 /* GameScene.swift */; };
 		A95AE6CC1F1BA6E800590E99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95AE6CB1F1BA6E800590E99 /* Assets.xcassets */; };
@@ -107,6 +108,7 @@
 		2EEC63821F32CFC50069B255 /* BattleServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BattleServiceImpl.swift; path = Base.lproj/serviceImpl/BattleServiceImpl.swift; sourceTree = "<group>"; };
 		2EEC63841F35891C0069B255 /* Room.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Room.storyboard; path = Base.lproj/view/Room.storyboard; sourceTree = "<group>"; };
 		2EEC63861F3596290069B255 /* Card.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Card.plist; path = Base.lproj/SupportingFiles/Card.plist; sourceTree = "<group>"; };
+		2EEC63881F3AF9760069B255 /* RoomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomController.swift; path = Base.lproj/controller/RoomController.swift; sourceTree = "<group>"; };
 		96DFE8D3F0C5FCA9D4EBDE86 /* Pods-NJSY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJSY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NJSY/Pods-NJSY.debug.xcconfig"; sourceTree = "<group>"; };
 		A95AE6BB1F1BA6E800590E99 /* NJSY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NJSY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95AE6BE1F1BA6E800590E99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				2E52EAE91F287A3F005E093F /* SecondViewController.swift */,
 				2E7694E91F20AFA5007E5157 /* InitialViewController.swift */,
 				2E6904C01F2EE9C5008ACB6D /* RoomListViewController.swift */,
+				2EEC63881F3AF9760069B255 /* RoomController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				2E0A862B1F30CFF8005B5540 /* CharacterServiceImpl.swift in Sources */,
 				2E7694DE1F20AF6D007E5157 /* UserVO.swift in Sources */,
 				2E0448B71F21F6E600207D73 /* BattleDaoImpl.swift in Sources */,
+				2EEC63891F3AF9760069B255 /* RoomController.swift in Sources */,
 				2E0448B51F21F53000207D73 /* BattleDao.swift in Sources */,
 				2E0A86211F305C38005B5540 /* BattleVO.swift in Sources */,
 				2E06511B1F2186D40087592A /* RoomDao.swift in Sources */,
