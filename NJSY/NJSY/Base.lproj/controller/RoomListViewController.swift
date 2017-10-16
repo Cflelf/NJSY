@@ -14,7 +14,7 @@ protocol ValueDelegate {
 class RoomListViewController:UIViewController,UITableViewDelegate,UITableViewDataSource{
     var roomListView:UIView!
     var roomTable:UITableView!
-    var gameMode:String? = nil
+    var gameMode:String?
     
     private var roomService:RoomService!
     

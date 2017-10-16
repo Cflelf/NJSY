@@ -9,7 +9,7 @@
 protocol UserService {
     func register(account:String,password:String) ->String
     
-    func login(account:String,password:String) -> String
+    func login(account:String,password:String) -> ResultMessage
     
     func getUserByAccount(account:String) -> UserVO?
 }

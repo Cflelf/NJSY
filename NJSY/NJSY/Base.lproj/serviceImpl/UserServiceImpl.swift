@@ -18,16 +18,16 @@ class UserServiceImpl:UserService{
         return userDao.addUser(userPO: UserPO(account:account,password:password))
     }
     
-    func login(account:String,password:String) -> String{
+    func login(account:String,password:String) -> ResultMessage{
         let userVO = self.getUserByAccount(account: account)
         if userVO != nil{
             if(userVO!.password == password){
-                return "\(account) login success"
+                return ResultMessage.LOGIN_SUCCESS
             }else{
-                return "password wrong"
+                return ResultMessage.LOGIN_PASSWORD_WRONG
             }
         }else{
-            return "no such account"
+            return ResultMessage.LOGIN_NO_SUCH_ACCOUNT
         }
     }
     

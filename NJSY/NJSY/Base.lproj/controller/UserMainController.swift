@@ -8,37 +8,47 @@
 
 import UIKit
 import SnapKit
-import LeanCloud
 
 class UserMainController:UIViewController,UITableViewDelegate,UITableViewDataSource{
-    
-    let modeList = ["科目:1V1","科目:2V2","科目:3V3"]
-    
-    @IBOutlet weak var NJLogo: UIImageView!
-    var gameModeChoose: UIButton!
-    var modeTable:UITableView!
-    var gameNameLabel:UILabel!
-    var chooseRoomButton:UIButton!
-    var getPersonInfoButton:UIButton!
-    var ruleButton:UIButton!
-    var exitButton:UIButton!
-    var nameLabel:UILabel!
-    var gameMode:String = "1V1"
-    private var roomService:RoomService!
-    @IBOutlet weak var accountLabel: UILabel!
-    var accountString:String = ""
-    
-    
+    @IBOutlet weak var acccountLabel: UILabel!
+    @IBOutlet weak var avatarButton: UIButton!
+    @IBOutlet weak var navView: UIView!
+    @IBOutlet weak var modeButton: UIButton!
+    @IBOutlet weak var modeView: ModeView!
+    @IBOutlet weak var modeLabel: UILabel!
+    @IBOutlet weak var rightArrowButton: UIButton!
+    @IBOutlet weak var leftArrowButton: UIButton!
+    var roomService:RoomService!
+    var tableView:UITableView!
+    var account:String!
+    let font = "PingFangTC-Thin"
+    let list = ["个人资料","游戏设置","游戏介绍","退出登录"]
+    let iconList = [#imageLiteral(resourceName: "userInfo"),#imageLiteral(resourceName: "setting"),#imageLiteral(resourceName: "intro"),#imageLiteral(resourceName: "exit")]
+    let modeImageList = [#imageLiteral(resourceName: "playground-default"),#imageLiteral(resourceName: "tower"),#imageLiteral(resourceName: "wende"),#imageLiteral(resourceName: "pool")]
+    let modeNameList = ["热血操场","锁妖塔","文德茶座","天鹅湖"]
+    var modeNum = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        setAccountLabel()
-        loadButton()
-        modeTable.delegate = self
-        modeTable.dataSource = self
-        self.roomService = RoomServiceImpl()
+        tableView = UITableView()
+        navView.addSubview(tableView)
+        tableView.snp.makeConstraints { (make) in
+            make.top.equalTo(acccountLabel.snp.bottom).offset(8)
+            make.leading.equalTo(0)
+            make.trailing.equalTo(0)
+            make.bottom.equalTo(0)
+        }
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView()
         
-//        let servie = BattleServiceImpl()
-//        print(servie.chooseCharacter(roomId: 1, userId: "pxr", characterId: 1))
+        navView.layer.borderWidth = 0.5
+        navView.layer.borderColor = UIColor.black.cgColor
+        
+        avatarButton.imageView?.layer.borderWidth = 0.5
+        avatarButton.imageView?.layer.borderColor = UIColor.black.cgColor
+        avatarButton.imageView?.layer.cornerRadius = 40
+        
+        acccountLabel.text = account
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,155 +56,43 @@ class UserMainController:UIViewController,UITableViewDelegate,UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return modeList.count
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 25
+        return list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let indentifier = "cell"
-        let cell = UITableViewCell(style: .default, reuseIdentifier: indentifier)
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        cell.selectionStyle = .none
         cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0)
-        cell.textLabel?.text = modeList[indexPath.row]
-        cell.textLabel?.textAlignment = NSTextAlignment.center
-        cell.textLabel?.font = UIFont(name: "MStiffHei PRC", size: 17)
-       
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        gameModeChoose.setTitle(modeList[indexPath.row], for: .normal)
-        gameModeChoose.titleLabel?.font = UIFont(name: "MStiffHei PRC", size: 20)
-        modeTable.isHidden = true
-        self.gameMode = (gameModeChoose.titleLabel?.text?.components(separatedBy: ":")[1])!
-    }
-    
-    func GameModeChoose(){
-        modeTable.isHidden = false
-    }
-    //界面初始化时需要加载的按钮
-    func loadButton(){
-        gameModeChoose = UIButton()
-        gameModeChoose.layer.borderWidth = 2
-        gameModeChoose.layer.borderColor = UIColor.black.cgColor
-        gameModeChoose.setTitleColor(UIColor.black, for: .normal)
-        gameModeChoose.setTitle("科目:1V1", for: .normal)
-        gameModeChoose.titleLabel?.font = UIFont(name: "MStiffHei PRC", size: 20)
-        self.view.addSubview(gameModeChoose)
-        gameModeChoose.snp.makeConstraints{(make) -> Void in
-            make.centerY.equalTo(NJLogo.snp.centerY)
-            make.width.equalTo(self.view.bounds.width/6)
-            make.height.equalTo(self.view.bounds.height/8)
-            make.leading.equalTo(self.view.bounds.width/20)
-        }
-        gameModeChoose.addTarget(self, action: #selector(GameModeChoose), for: .touchUpInside)
-        
-        chooseRoomButton = UIButton()
-        self.view.addSubview(chooseRoomButton)
-        chooseRoomButton.setTitle("一:进入考试", for: .normal)
-        chooseRoomButton.setTitleColor(UIColor.black, for: .normal)
-        chooseRoomButton.titleLabel?.font = UIFont(name: "MStiffHei PRC", size: 30)
-        chooseRoomButton.addTarget(self, action:#selector(showRoomList), for: .touchUpInside)
-        chooseRoomButton.snp.makeConstraints{(make) -> Void in
-            make.leading.equalTo(50)
-            make.centerY.equalTo(self.view.snp.centerY)
-            make.height.equalTo(40)
-        }
-        chooseRoomButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        
-        getPersonInfoButton = UIButton()
-        self.view.addSubview(getPersonInfoButton)
-        getPersonInfoButton.setTitle("二:浏览学生信息", for: .normal)
-        getPersonInfoButton.setTitleColor(UIColor.black, for: .normal)
-        getPersonInfoButton.titleLabel?.font = UIFont(name: "MStiffHei PRC", size: 30)
-        getPersonInfoButton.snp.makeConstraints{(make) -> Void in
-            make.trailing.equalTo(-50)
-            make.centerY.equalTo(self.view.snp.centerY)
-            make.height.equalTo(40)
-        }
-        getPersonInfoButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        
-        ruleButton = UIButton()
-        self.view.addSubview(ruleButton)
-        ruleButton.setTitle("三:考前须知", for: .normal)
-        ruleButton.setTitleColor(UIColor.black, for: .normal)
-        ruleButton.titleLabel?.font = UIFont(name: "MStiffHei PRC", size: 30)
-//        ruleButton.addTarget(self, action:#selector(showRoomList), for: .touchUpInside)
-        ruleButton.snp.makeConstraints{(make) -> Void in
-            make.leading.equalTo(50)
-            make.top.equalTo(chooseRoomButton.snp.bottom).offset(30)
-            make.height.equalTo(40)
-        }
-        ruleButton.titleLabel?.adjustsFontSizeToFitWidth = true
-
-        exitButton = UIButton()
-        self.view.addSubview(exitButton)
-        exitButton.setTitle("四:退出考试", for: .normal)
-        exitButton.setTitleColor(UIColor.black, for: .normal)
-        exitButton.titleLabel?.font = UIFont(name: "MStiffHei PRC", size: 30)
-        //        ruleButton.addTarget(self, action:#selector(showRoomList), for: .touchUpInside)
-        exitButton.snp.makeConstraints{(make) -> Void in
-            make.leading.equalTo(getPersonInfoButton.snp.leading)
-            make.top.equalTo(getPersonInfoButton.snp.bottom).offset(30)
-            make.height.equalTo(40)
-        }
-        exitButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        
-        nameLabel = UILabel()
-        self.view.addSubview(nameLabel)
-        nameLabel.text = "姓名:"
-        nameLabel.font = UIFont(name: "MStiffHei PRC", size: 25)
-        nameLabel.textColor = UIColor.black
-        nameLabel.snp.makeConstraints{(make) -> Void in
-            make.leading.equalTo(gameModeChoose.snp.trailing).offset(50)
-            make.centerY.equalTo(gameModeChoose.snp.centerY)
+        let icon = UIImageView(image: iconList[indexPath.row])
+        cell.addSubview(icon)
+        icon.snp.makeConstraints { (make) in
+            make.centerY.equalTo(cell.contentView.snp.centerY)
+            make.leading.equalTo(8)
+            make.width.equalTo(20)
             make.height.equalTo(20)
         }
-        nameLabel.adjustsFontSizeToFitWidth = true
-        
-        modeTable = UITableView()
-        self.view.addSubview(modeTable)
-        modeTable.snp.makeConstraints{(make) -> Void in
-            make.leading.equalTo(gameModeChoose.snp.leading)
-            make.height.equalTo(75)
-            make.top.equalTo(gameModeChoose.snp.bottom)
-            make.trailing.equalTo(gameModeChoose.snp.trailing)
+        let label = UILabel()
+        cell.contentView.addSubview(label)
+        label.text = list[indexPath.row]
+        label.font = UIFont(name: font, size: 17)
+        label.snp.makeConstraints { (make) in
+            make.centerY.equalTo(cell.contentView.snp.centerY)
+            make.leading.equalTo(icon.snp.trailing).offset(8)
         }
-        modeTable.isHidden = true
-        
-        gameNameLabel = UILabel()
-        self.view.addSubview(gameNameLabel)
-        gameNameLabel.text = "菁园物语"
-        gameNameLabel.font = UIFont(name: "MStiffHei PRC", size: 50)
-        gameNameLabel.snp.makeConstraints{(make) -> Void in
-            make.centerX.equalTo(self.view.snp.centerX)
-            make.top.equalTo(nameLabel.snp.bottom).offset(30)
+        return cell
+    }
+    @IBAction func formerMode(_ sender: UIButton) {
+        if modeNum>0{
+            modeNum = modeNum - 1
         }
-        gameNameLabel.adjustsFontSizeToFitWidth = true
+        modeButton.setImage(modeImageList[modeNum], for: .normal)
+        modeLabel.text = modeNameList[modeNum]
     }
-    
-    func showRoomList(){
-        let roomController = RoomListViewController()
-        roomController.gameMode = self.gameMode
-        self.showDetailViewController(roomController, sender: nil)
-    }
-    
-    func setAccountLabel(){
-        self.accountLabel.text! = accountString
-        self.view.addSubview(accountLabel)
-        accountLabel.font = UIFont(name: "MStiffHei PRC", size: 25)
-        accountLabel.textColor = UIColor.black
-        accountLabel.snp.makeConstraints{(make) -> Void in
-            make.height.equalTo(30)
-            make.centerX.equalTo(self.view.snp.centerX)
-            make.top.equalTo(27)
+    @IBAction func nextMode(_ sender: UIButton) {
+        if modeNum<modeNameList.count-1{
+            modeNum = modeNum + 1
         }
-
-        accountLabel.adjustsFontSizeToFitWidth = true
-
+        modeButton.setImage(modeImageList[modeNum], for: .normal)
+        modeLabel.text = modeNameList[modeNum]
     }
-    
 }
