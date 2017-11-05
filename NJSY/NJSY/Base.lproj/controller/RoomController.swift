@@ -28,9 +28,9 @@ class RoomController:UIViewController,UICollectionViewDelegate,UICollectionViewD
     var font = "PingFangTC-Thin"
     var rightView: UIView!
     var leftView: UIView!
-    var addPlace = -1
     var userPosition = -1;
     var playerList:[String]!
+    var selectedHero:CharacterVO?
     override func viewDidLoad() {
         super.viewDidLoad()
         roomInfo.text = room["roomName"] as! String
@@ -70,15 +70,12 @@ class RoomController:UIViewController,UICollectionViewDelegate,UICollectionViewD
         }
         
         playerList = (room["playerList"] as! String).components(separatedBy: ";")
-        print(playerList)
         for i in 0...playerList.count-2{
             if(playerList[i].components(separatedBy: ":")[1] as String != ""){
                 list[i].nameLabel.text = playerList[i].components(separatedBy: ":")[1] as String;
                 if(list[i].nameLabel.text == CoreDataImpl.getUserInfo()?.account){
                     userPosition = i;
                 }
-            }else if(addPlace == -1){
-                addPlace = i;
             }
         }
         
@@ -93,24 +90,22 @@ class RoomController:UIViewController,UICollectionViewDelegate,UICollectionViewD
         setCollectionView(collectionView: helpCollectionView)
         DispatchQueue.global(qos: .default).async {
             SocketImpl.socket.on("enterRoom") {data, ack in
-                    self.list[self.addPlace].nameLabel.text = "\(data[0])"
-                    self.addPlace = -1;
+                print("我收到进入房间消息啦！！！")
                     for i in 0...self.playerList.count-2{
-                        if(self.addPlace == -1){
-                            self.addPlace = i;
-                            self.playerList[i]+="\(data[0])"
+                        if(self.playerList[i].components(separatedBy: ":")[1] as String == ""){
+                            self.playerList[i].append("\(data[0])")
+                            print(self.playerList)
+                            print("\(i)*******************************")
+                            self.list[i].nameLabel.text = "\(data[0])"
+                            break;
                         }
                     }
             }
             SocketImpl.socket.on("exitRoom") {data, ack in
+                print("我收到离开房间消息啦")
                 self.list[data[0] as! Int].nameLabel.text = "无"
-                self.addPlace = -1;
-                for i in 0...self.playerList.count-2{
-                    if(self.addPlace == -1){
-                        self.addPlace = i;
-                        self.playerList[i]+="\(data[0])"
-                    }
-                }
+                self.playerList[data[0] as! Int] = "\(data[0] as! Int + 1):"
+                print(self.playerList)
             }
         }
     }
@@ -145,6 +140,7 @@ class RoomController:UIViewController,UICollectionViewDelegate,UICollectionViewD
     }
     
     func showCharacterInfo(_ sender:CharacterButton){
+        selectedHero = sender.character
         self.bloodLabel.text = "血量: \((sender.character?.blood)!)"
         self.nameLabel.text = "\((sender.character?.name)!)"
         self.imageView.image = sender.image(for: .normal)
@@ -160,7 +156,6 @@ class RoomController:UIViewController,UICollectionViewDelegate,UICollectionViewD
                 print(json)
                 if json["ResultMessage"] as! Int == 4{
                     SocketImpl.socket.emit("exitRoom", ["roomId":self.room["roomId"]!,"account":CoreDataImpl.getUserInfo()?.account!,"position":self.userPosition])
-                    self.playerList[self.userPosition] = "\(self.userPosition+1):"
                     self.dismiss(animated: true, completion: nil)
                 }else{
                     self.showToast(message: "EXIT ROOM FAILURE")
@@ -171,6 +166,7 @@ class RoomController:UIViewController,UICollectionViewDelegate,UICollectionViewD
     @IBAction func randomSelect(_ sender: UIButton) {
     }
     @IBAction func confirmSelect(_ sender: UIButton) {
+        self.list[self.userPosition].imageView.image = UIImage(named: (self.selectedHero?.image)!)
     }
     override func didReceiveMemoryWarning() {
         

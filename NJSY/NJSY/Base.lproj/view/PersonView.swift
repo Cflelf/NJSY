@@ -12,6 +12,7 @@ class PersonView:UIView{
     var userVO:UserVO?
     var font = "PingFangTC-Thin"
     var nameLabel:UILabel!
+    var imageView:UIImageView!
     func loadPersonView(i:Int){
         layer.borderWidth = 0.5
         let id = UILabel()
@@ -23,7 +24,7 @@ class PersonView:UIView{
             make.top.equalTo(4)
         })
     
-        nameLabel = UILabel()
+        self.nameLabel = UILabel()
         nameLabel.text = "无"
         nameLabel.font = UIFont(name: font, size: 12)
         nameLabel.textAlignment = .center
@@ -33,7 +34,7 @@ class PersonView:UIView{
             make.centerY.equalTo(id.snp.centerY)
         })
     
-        let imageView = UIImageView()
+        self.imageView = UIImageView()
         self.addSubview(imageView)
         imageView.snp.makeConstraints({ (make) in
             make.top.equalTo(id.snp.bottom)
