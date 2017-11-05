@@ -9,41 +9,37 @@
 import UIKit
 
 class PersonView:UIView{
-    var userVO:UserVO!
-    
+    var userVO:UserVO?
+    var font = "PingFangTC-Thin"
+    var nameLabel:UILabel!
     func loadPersonView(i:Int){
-        self.layer.borderWidth = 1
-        let id = UIButton()
-        id.setTitle("\(i)", for: .normal)
-        id.setTitleColor(.black, for: .normal)
-        id.titleLabel?.font = UIFont(name: "MStiffHei PRC", size: 12)
-        id.layer.borderWidth = 0.5
+        layer.borderWidth = 0.5
+        let id = UILabel()
+        id.text = "\(i)"
+        id.font = UIFont(name: font, size: 12)
         self.addSubview(id)
         id.snp.makeConstraints({ (make) in
-            make.width.equalTo(self.snp.width)
-            make.height.equalTo(15)
-            make.centerX.equalTo(self.snp.centerX)
-            make.top.equalTo(0)
+            make.leading.equalTo(4)
+            make.top.equalTo(4)
         })
     
-        let nameLabel = UILabel()
-        nameLabel.text = "pxr"
-        nameLabel.font = UIFont(name: "MStiffHei PRC", size: 14)
+        nameLabel = UILabel()
+        nameLabel.text = "无"
+        nameLabel.font = UIFont(name: font, size: 12)
         nameLabel.textAlignment = .center
         self.addSubview(nameLabel)
         nameLabel.snp.makeConstraints({ (make) in
-            make.bottom.equalTo(-2)
-            make.leading.equalTo(0)
-            make.trailing.equalTo(0)
+            make.centerX.equalTo(self.snp.centerX)
+            make.centerY.equalTo(id.snp.centerY)
         })
     
-        let imageView = UIImageView(image: #imageLiteral(resourceName: "notchoose"))
+        let imageView = UIImageView()
         self.addSubview(imageView)
         imageView.snp.makeConstraints({ (make) in
-            make.centerY.equalTo(self.snp.centerY)
+            make.top.equalTo(id.snp.bottom)
             make.centerX.equalTo(self.snp.centerX)
-            make.width.equalTo(self.snp.height).dividedBy(4)
-            make.height.equalTo(self.snp.height).dividedBy(2)
+            make.width.equalTo(self.snp.width).offset(-8)
+            make.bottom.equalTo(0)
         })
     }
 }

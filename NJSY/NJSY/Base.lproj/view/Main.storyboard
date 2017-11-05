@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,7 +27,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secondView" translatesAutoresizingMaskIntoConstraints="NO" id="Crl-8m-Xrz">
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secondView" translatesAutoresizingMaskIntoConstraints="NO" id="Crl-8m-Xrz">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="菁华烟云" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnB-ap-f0t">
@@ -39,7 +39,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7c-4q-8zJ">
                                 <rect key="frame" x="115" y="120" width="437" height="245"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login card" translatesAutoresizingMaskIntoConstraints="NO" id="oqX-c3-Xj3">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login card" translatesAutoresizingMaskIntoConstraints="NO" id="oqX-c3-Xj3">
                                         <rect key="frame" x="0.0" y="0.0" width="437" height="245"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8m-Bf-4Fz">
@@ -155,6 +155,7 @@
                     <connections>
                         <outlet property="accountTextField" destination="dTb-wP-79c" id="2Dc-Ol-ncV"/>
                         <outlet property="loginButton" destination="n8m-Bf-4Fz" id="p5Y-Zu-obD"/>
+                        <outlet property="loginView" destination="lDr-Q5-KTZ" id="CzX-W7-wNs"/>
                         <outlet property="passwordTextField" destination="5EE-p1-UMv" id="kTC-4q-MLq"/>
                         <outlet property="registerButton" destination="4uD-hV-wdT" id="T4H-nn-zio"/>
                         <outlet property="studentCardView" destination="oqX-c3-Xj3" id="IZJ-65-a1m"/>

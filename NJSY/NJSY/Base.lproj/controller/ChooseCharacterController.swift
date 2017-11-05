@@ -100,7 +100,5 @@ class ChooseCharacterController:UIViewController,UICollectionViewDelegate,UIColl
     }
     
     func loadCharacter(){
-        let characterService = CharacterServiceImpl()
-        self.characterList = characterService.getAllCharacters()
     }
 }

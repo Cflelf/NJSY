@@ -8,7 +8,8 @@
 
 import UIKit
 import SnapKit
-
+import Alamofire
+import ReachabilitySwift
 class MainViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
@@ -16,12 +17,10 @@ class MainViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var studentCardView: UIImageView!
-    private var userService:UserService!
+    @IBOutlet weak var loginView: UIView!
+    var registerView:UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //初始化用户逻辑
-        userService = UserServiceImpl()
-        
         //加载标题字体
         titleLabel.font = UIFont(name: "PingFangTC-Thin", size: CGFloat(70/667*self.view.bounds.width))
         
@@ -48,20 +47,26 @@ class MainViewController: UIViewController {
         if(accountTextField.text == "" || passwordTextField.text == ""){
             self.showToast(message: "学号密码不能为空")
         }else{
-            switch(userService.login(account: accountTextField.text!, password: passwordTextField.text!)){
-            case .LOGIN_SUCCESS:
-                self.performSegue(withIdentifier: "enterUserMain", sender: nil)
-                CoreDataImpl.saveUserInfo(acccout: accountTextField.text!, password: passwordTextField.text!)
-                self.showToast(message: "登录成功")
-                break
-            case .LOGIN_PASSWORD_WRONG:
-                self.showToast(message: "密码错误")
-                break
-            case .LOGIN_NO_SUCH_ACCOUNT:
-                self.showToast(message: "账号不存在")
-                break
-            default:
-                break
+            let reachability = Reachability()!
+            if reachability.isReachable{
+                let data = ["account":accountTextField.text!,"password":passwordTextField.text!]
+                Alamofire.request("http://localhost:3000/users/login",method:.post,parameters:data,encoding:JSONEncoding.default).responseJSON(){
+                    (response) in
+                    if let json = response.result.value as? [String:Any]{
+                        switch(json["ResultMessage"] as! Int){
+                            case 0:
+                                self.performSegue(withIdentifier: "enterUserMain", sender: nil)
+                                CoreDataImpl.saveUserInfo(acccout: self.accountTextField.text!, password: self.passwordTextField.text!)
+                                self.showToast(message: "登录成功")
+                                break
+                            case 1:
+                                self.showToast(message: "密码错误")
+                                break
+                            default:
+                                break
+                        }
+                    }
+                }
             }
         }
     }
@@ -75,6 +80,12 @@ class MainViewController: UIViewController {
     
     
     @IBAction func goToRegister(_ sender: UIButton) {
+//        UIView.beginAnimations(nil, context: nil)
+//        UIView.setAnimationDuration(1.0)
+//        UIView.setAnimationTransition(.flipFromRight, for: loginView, cache: true)
+//        UIView.commitAnimations()
+//        loginView.isHidden = true
+//        registerView.isHidden = false
     }
     
     func setTextField(textField:UITextField){

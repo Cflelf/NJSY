@@ -4,7 +4,11 @@
 use_frameworks! # LeanCloud Swift SDK can only be integrated as framework.
 
 target 'NJSY' do
-pod 'LeanCloud'
+pod 'LeanCloud', '~> 10.1.0'
 pod 'SnapKit', '~> 3.2.0'
 pod 'EasyToast', '~> 2.0.2'
+pod 'SwiftSocket'
+pod 'Socket.IO-Client-Swift', '~> 12.1.2'
+pod 'ReachabilitySwift', '~> 3'
+pod 'HandyJSON', '~> 1.7.2'
 end

@@ -68,6 +68,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blw-xs-Dza">
                                         <rect key="frame" x="103" y="85" width="220" height="150"/>
                                         <state key="normal" image="playground-default"/>
+                                        <connections>
+                                            <action selector="showRoomList:" destination="3q5-qQ-Q16" eventType="touchUpInside" id="LLt-0M-0CM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLs-lZ-dmU">
                                         <rect key="frame" x="8" y="144" width="32" height="32"/>
@@ -122,11 +125,20 @@
                         <outlet property="modeView" destination="Ee8-Zi-UO9" id="Lue-No-mpW"/>
                         <outlet property="navView" destination="L1r-H6-9En" id="N11-qV-qAg"/>
                         <outlet property="rightArrowButton" destination="onO-d9-YYa" id="85c-sw-aRX"/>
+                        <segue destination="ayc-6E-KAb" kind="show" identifier="showRoomList" id="iS8-p9-Oq1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a6I-Rt-frn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="29.23538230884558" y="12"/>
+        </scene>
+        <!--RoomList-->
+        <scene sceneID="aWn-Fd-Ihu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RoomList" id="ayc-6E-KAb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVr-zT-ZOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="518" y="-184"/>
         </scene>
     </scenes>
     <resources>

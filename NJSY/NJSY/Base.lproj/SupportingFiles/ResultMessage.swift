@@ -10,4 +10,7 @@ enum ResultMessage{
     case LOGIN_SUCCESS
     case LOGIN_PASSWORD_WRONG
     case LOGIN_NO_SUCH_ACCOUNT
+    case ROOM_ENTER_FILLED
+    case ROOM_ENTER_SUCCESS
+    case NETWORK_ERROR
 }

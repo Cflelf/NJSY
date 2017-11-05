@@ -10,10 +10,4 @@ class UserVO{
     var account:String!
     var password:String!
     var name:String!
-    
-    init(userPO:UserPO) {
-        self.account = userPO.getAccount()
-        self.password = userPO.getPassword()
-    }
-    
 }

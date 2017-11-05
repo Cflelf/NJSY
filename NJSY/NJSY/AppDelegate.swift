@@ -9,6 +9,7 @@
 import UIKit
 import LeanCloud
 import CoreData
+import Alamofire
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -18,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         LeanCloud.initialize(applicationID: "iRG8e5mtoiJQGYpG1zSeHemA-gzGzoHsz", applicationKey: "ien3hCC62fSpOFvHxJaCkIaM")
+        SocketImpl.socket.on(clientEvent: .connect) {data, ack in
+            print("socket connected")
+        }
+        SocketImpl.socket.connect()
         return true
     }
     

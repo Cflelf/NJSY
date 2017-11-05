@@ -8,37 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		17A84162E64155CFD8B410FF /* Pods_NJSY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F20A5EC22CCB137E67ADD359 /* Pods_NJSY.framework */; };
-		2E0448B11F21AD8400207D73 /* RoomVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0448B01F21AD8400207D73 /* RoomVO.swift */; };
-		2E0448B51F21F53000207D73 /* BattleDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0448B41F21F53000207D73 /* BattleDao.swift */; };
-		2E0448B71F21F6E600207D73 /* BattleDaoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0448B61F21F6E600207D73 /* BattleDaoImpl.swift */; };
+		2E0448B11F21AD8400207D73 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0448B01F21AD8400207D73 /* Room.swift */; };
 		2E0448B91F21F73500207D73 /* LeanCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0448B81F21F73500207D73 /* LeanCloud.framework */; };
-		2E0651111F2185490087592A /* UserDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0651101F2185490087592A /* UserDao.swift */; };
-		2E0651141F2185C50087592A /* RoomDaoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0651121F2185C50087592A /* RoomDaoImpl.swift */; };
-		2E0651151F2185C50087592A /* UserDaoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0651131F2185C50087592A /* UserDaoImpl.swift */; };
-		2E0651181F2185D40087592A /* RoomServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0651161F2185D40087592A /* RoomServiceImpl.swift */; };
-		2E0651191F2185D40087592A /* UserServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0651171F2185D40087592A /* UserServiceImpl.swift */; };
-		2E06511B1F2186D40087592A /* RoomDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06511A1F2186D40087592A /* RoomDao.swift */; };
-		2E06511D1F2188F60087592A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06511C1F2188F60087592A /* UserService.swift */; };
-		2E06511F1F2189100087592A /* RoomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06511E1F2189100087592A /* RoomService.swift */; };
-		2E0651231F21A9210087592A /* CharacterPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0651221F21A9210087592A /* CharacterPO.swift */; };
 		2E0A861F1F2F050C005B5540 /* Character.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E0A861E1F2F050C005B5540 /* Character.plist */; };
 		2E0A86211F305C38005B5540 /* BattleVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A86201F305C38005B5540 /* BattleVO.swift */; };
-		2E0A86231F306693005B5540 /* CharacterDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A86221F306693005B5540 /* CharacterDao.swift */; };
-		2E0A86251F30AE6A005B5540 /* CharacterDaoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A86241F30AE6A005B5540 /* CharacterDaoImpl.swift */; };
 		2E0A86291F30CF14005B5540 /* CharacterVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A86281F30CF14005B5540 /* CharacterVO.swift */; };
-		2E0A862B1F30CFF8005B5540 /* CharacterServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A862A1F30CFF8005B5540 /* CharacterServiceImpl.swift */; };
-		2E0A862D1F30D099005B5540 /* CharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A862C1F30D099005B5540 /* CharacterService.swift */; };
 		2E1867651F26DB8F0057DBFE /* UserMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1867641F26DB8F0057DBFE /* UserMain.storyboard */; };
 		2E2F0ABF1F9336AA0019EF27 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F0ABD1F9336AA0019EF27 /* Model.xcdatamodeld */; };
 		2E2F0AC11F9337D50019EF27 /* CoreDataImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F0AC01F9337D50019EF27 /* CoreDataImpl.swift */; };
+		2E34C2D51F9E10B1000CC2B2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E34C2D61F9E10B1000CC2B2 /* Alamofire.framework */; };
 		2E52EAEA1F287A3F005E093F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E52EAE91F287A3F005E093F /* MainViewController.swift */; };
 		2E6904BF1F2ED05A008ACB6D /* paperfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E6904BE1F2ED05A008ACB6D /* paperfont.ttf */; };
 		2E6904C11F2EE9C5008ACB6D /* RoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6904C01F2EE9C5008ACB6D /* RoomListViewController.swift */; };
 		2E6904C31F2EFBD0008ACB6D /* UserMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6904C21F2EFBD0008ACB6D /* UserMainController.swift */; };
+		2E704A661FAF3808009D414D /* CharacterUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E704A651FAF3808009D414D /* CharacterUtil.swift */; };
 		2E7694DE1F20AF6D007E5157 /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694DD1F20AF6D007E5157 /* UserVO.swift */; };
 		2E7694E01F20AF77007E5157 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E7694DF1F20AF77007E5157 /* Main.storyboard */; };
-		2E7694E61F20AF92007E5157 /* UserPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694E41F20AF92007E5157 /* UserPO.swift */; };
-		2E7694EC1F20B017007E5157 /* RoomPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7694EB1F20B017007E5157 /* RoomPO.swift */; };
 		2E7F2BD81F9476F500D6ACDB /* ModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F2BD71F9476F500D6ACDB /* ModeView.swift */; };
 		2E7F2BDA1F94C23A00D6ACDB /* RoomList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E7F2BD91F94C23A00D6ACDB /* RoomList.storyboard */; };
 		2E995EF51F90A1B80078C901 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E995EF41F90A1B80078C901 /* CharacterCell.swift */; };
@@ -51,9 +36,11 @@
 		2EA24E761F932ECD00C8E829 /* EasyToast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA24E771F932ECD00C8E829 /* EasyToast.framework */; };
 		2EA24E791F932F1000C8E829 /* ToastExtensition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA24E781F932F1000C8E829 /* ToastExtensition.swift */; };
 		2EA24E7B1F932F5A00C8E829 /* ResultMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA24E7A1F932F5A00C8E829 /* ResultMessage.swift */; };
-		2EBD69B61F232A4D00726771 /* BattlePO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD69B51F232A4D00726771 /* BattlePO.swift */; };
-		2EEC63811F32CF650069B255 /* BattleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEC63801F32CF650069B255 /* BattleService.swift */; };
-		2EEC63831F32CFC50069B255 /* BattleServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEC63821F32CFC50069B255 /* BattleServiceImpl.swift */; };
+		2EA3AAF91FA0550A001B9EDE /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA3AAFA1FA0550A001B9EDE /* SocketIO.framework */; };
+		2EA3AAFB1FA05605001B9EDE /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA3AAFC1FA05605001B9EDE /* Starscream.framework */; };
+		2EA3AAFE1FA05680001B9EDE /* SocketImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA3AAFD1FA05680001B9EDE /* SocketImpl.swift */; };
+		2EA3AAFF1FA1B4C9001B9EDE /* ReachabilitySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA3AB001FA1B4C9001B9EDE /* ReachabilitySwift.framework */; };
+		2EC58C901FAC4F5100EA05D0 /* HandyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC58C911FAC4F5100EA05D0 /* HandyJSON.framework */; };
 		2EEC63851F35891C0069B255 /* Room.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EEC63841F35891C0069B255 /* Room.storyboard */; };
 		2EEC63871F3596290069B255 /* Card.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EEC63861F3596290069B255 /* Card.plist */; };
 		2EEC63891F3AF9760069B255 /* RoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEC63881F3AF9760069B255 /* RoomController.swift */; };
@@ -84,38 +71,24 @@
 
 /* Begin PBXFileReference section */
 		0AFEC174849FA67C7FCB3B5B /* Pods-NJSY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJSY.release.xcconfig"; path = "Pods/Target Support Files/Pods-NJSY/Pods-NJSY.release.xcconfig"; sourceTree = "<group>"; };
-		2E0448B01F21AD8400207D73 /* RoomVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomVO.swift; path = Base.lproj/vo/RoomVO.swift; sourceTree = "<group>"; };
-		2E0448B41F21F53000207D73 /* BattleDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BattleDao.swift; path = Base.lproj/dao/BattleDao.swift; sourceTree = "<group>"; };
-		2E0448B61F21F6E600207D73 /* BattleDaoImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BattleDaoImpl.swift; path = Base.lproj/daoImpl/BattleDaoImpl.swift; sourceTree = "<group>"; };
+		2E0448B01F21AD8400207D73 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Room.swift; path = Base.lproj/vo/Room.swift; sourceTree = "<group>"; };
 		2E0448B81F21F73500207D73 /* LeanCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LeanCloud.framework; path = "../../../Library/Developer/Xcode/DerivedData/NJSY-bxuhmbrnphmovwbsebbypgdbasio/Build/Products/Debug-iphonesimulator/LeanCloud/LeanCloud.framework"; sourceTree = "<group>"; };
-		2E0651101F2185490087592A /* UserDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDao.swift; path = Base.lproj/dao/UserDao.swift; sourceTree = "<group>"; };
-		2E0651121F2185C50087592A /* RoomDaoImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomDaoImpl.swift; path = Base.lproj/daoImpl/RoomDaoImpl.swift; sourceTree = "<group>"; };
-		2E0651131F2185C50087592A /* UserDaoImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDaoImpl.swift; path = Base.lproj/daoImpl/UserDaoImpl.swift; sourceTree = "<group>"; };
-		2E0651161F2185D40087592A /* RoomServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomServiceImpl.swift; path = Base.lproj/serviceImpl/RoomServiceImpl.swift; sourceTree = "<group>"; };
-		2E0651171F2185D40087592A /* UserServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserServiceImpl.swift; path = Base.lproj/serviceImpl/UserServiceImpl.swift; sourceTree = "<group>"; };
-		2E06511A1F2186D40087592A /* RoomDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomDao.swift; path = Base.lproj/dao/RoomDao.swift; sourceTree = "<group>"; };
-		2E06511C1F2188F60087592A /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = Base.lproj/service/UserService.swift; sourceTree = "<group>"; };
-		2E06511E1F2189100087592A /* RoomService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomService.swift; path = Base.lproj/service/RoomService.swift; sourceTree = "<group>"; };
-		2E0651221F21A9210087592A /* CharacterPO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterPO.swift; path = Base.lproj/po/CharacterPO.swift; sourceTree = "<group>"; };
 		2E0A861E1F2F050C005B5540 /* Character.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Character.plist; path = Base.lproj/SupportingFiles/Character.plist; sourceTree = "<group>"; };
 		2E0A86201F305C38005B5540 /* BattleVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BattleVO.swift; path = Base.lproj/vo/BattleVO.swift; sourceTree = "<group>"; };
-		2E0A86221F306693005B5540 /* CharacterDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterDao.swift; path = Base.lproj/dao/CharacterDao.swift; sourceTree = "<group>"; };
-		2E0A86241F30AE6A005B5540 /* CharacterDaoImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterDaoImpl.swift; path = Base.lproj/daoImpl/CharacterDaoImpl.swift; sourceTree = "<group>"; };
 		2E0A86281F30CF14005B5540 /* CharacterVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterVO.swift; path = Base.lproj/vo/CharacterVO.swift; sourceTree = "<group>"; };
-		2E0A862A1F30CFF8005B5540 /* CharacterServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterServiceImpl.swift; path = Base.lproj/serviceImpl/CharacterServiceImpl.swift; sourceTree = "<group>"; };
-		2E0A862C1F30D099005B5540 /* CharacterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterService.swift; path = Base.lproj/service/CharacterService.swift; sourceTree = "<group>"; };
 		2E1867641F26DB8F0057DBFE /* UserMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UserMain.storyboard; path = Base.lproj/view/UserMain.storyboard; sourceTree = "<group>"; };
 		2E1867681F26DF0C0057DBFE /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/NJSY-bxuhmbrnphmovwbsebbypgdbasio/Build/Products/Debug-iphonesimulator/SnapKit/SnapKit.framework"; sourceTree = "<group>"; };
 		2E2F0ABE1F9336AA0019EF27 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		2E2F0AC01F9337D50019EF27 /* CoreDataImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataImpl.swift; path = Base.lproj/SupportingFiles/CoreDataImpl.swift; sourceTree = "<group>"; };
+		2E34C2D61F9E10B1000CC2B2 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E34C2D81F9E15F2000CC2B2 /* SwiftSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E52EAE91F287A3F005E093F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Base.lproj/controller/MainViewController.swift; sourceTree = "<group>"; };
 		2E6904BE1F2ED05A008ACB6D /* paperfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = paperfont.ttf; path = Base.lproj/SupportingFiles/paperfont.ttf; sourceTree = "<group>"; };
 		2E6904C01F2EE9C5008ACB6D /* RoomListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomListViewController.swift; path = Base.lproj/controller/RoomListViewController.swift; sourceTree = "<group>"; };
 		2E6904C21F2EFBD0008ACB6D /* UserMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserMainController.swift; path = Base.lproj/controller/UserMainController.swift; sourceTree = "<group>"; };
+		2E704A651FAF3808009D414D /* CharacterUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharacterUtil.swift; path = Base.lproj/SupportingFiles/CharacterUtil.swift; sourceTree = "<group>"; };
 		2E7694DD1F20AF6D007E5157 /* UserVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserVO.swift; path = Base.lproj/vo/UserVO.swift; sourceTree = "<group>"; };
 		2E7694DF1F20AF77007E5157 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/view/Main.storyboard; sourceTree = "<group>"; };
-		2E7694E41F20AF92007E5157 /* UserPO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserPO.swift; path = Base.lproj/po/UserPO.swift; sourceTree = "<group>"; };
-		2E7694EB1F20B017007E5157 /* RoomPO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomPO.swift; path = Base.lproj/po/RoomPO.swift; sourceTree = "<group>"; };
 		2E7F2BD71F9476F500D6ACDB /* ModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModeView.swift; path = Base.lproj/controller/ModeView.swift; sourceTree = "<group>"; };
 		2E7F2BD91F94C23A00D6ACDB /* RoomList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = RoomList.storyboard; path = Base.lproj/view/RoomList.storyboard; sourceTree = "<group>"; };
 		2E995EF41F90A1B80078C901 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharacterCell.swift; path = Base.lproj/controller/CharacterCell.swift; sourceTree = "<group>"; };
@@ -128,9 +101,11 @@
 		2EA24E771F932ECD00C8E829 /* EasyToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EasyToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EA24E781F932F1000C8E829 /* ToastExtensition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToastExtensition.swift; path = Base.lproj/SupportingFiles/ToastExtensition.swift; sourceTree = "<group>"; };
 		2EA24E7A1F932F5A00C8E829 /* ResultMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultMessage.swift; path = Base.lproj/SupportingFiles/ResultMessage.swift; sourceTree = "<group>"; };
-		2EBD69B51F232A4D00726771 /* BattlePO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BattlePO.swift; path = Base.lproj/po/BattlePO.swift; sourceTree = "<group>"; };
-		2EEC63801F32CF650069B255 /* BattleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BattleService.swift; path = Base.lproj/service/BattleService.swift; sourceTree = "<group>"; };
-		2EEC63821F32CFC50069B255 /* BattleServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BattleServiceImpl.swift; path = Base.lproj/serviceImpl/BattleServiceImpl.swift; sourceTree = "<group>"; };
+		2EA3AAFA1FA0550A001B9EDE /* SocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SocketIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EA3AAFC1FA05605001B9EDE /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EA3AAFD1FA05680001B9EDE /* SocketImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SocketImpl.swift; path = Base.lproj/SupportingFiles/SocketImpl.swift; sourceTree = "<group>"; };
+		2EA3AB001FA1B4C9001B9EDE /* ReachabilitySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReachabilitySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EC58C911FAC4F5100EA05D0 /* HandyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HandyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EEC63841F35891C0069B255 /* Room.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Room.storyboard; path = Base.lproj/view/Room.storyboard; sourceTree = "<group>"; };
 		2EEC63861F3596290069B255 /* Card.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Card.plist; path = Base.lproj/SupportingFiles/Card.plist; sourceTree = "<group>"; };
 		2EEC63881F3AF9760069B255 /* RoomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomController.swift; path = Base.lproj/controller/RoomController.swift; sourceTree = "<group>"; };
@@ -155,6 +130,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EC58C901FAC4F5100EA05D0 /* HandyJSON.framework in Frameworks */,
+				2EA3AAFF1FA1B4C9001B9EDE /* ReachabilitySwift.framework in Frameworks */,
+				2EA3AAFB1FA05605001B9EDE /* Starscream.framework in Frameworks */,
+				2EA3AAF91FA0550A001B9EDE /* SocketIO.framework in Frameworks */,
+				2E34C2D51F9E10B1000CC2B2 /* Alamofire.framework in Frameworks */,
 				2EA24E761F932ECD00C8E829 /* EasyToast.framework in Frameworks */,
 				CAA5D7ED1F2886A900BC638B /* SnapKit.framework in Frameworks */,
 				2E0448B91F21F73500207D73 /* LeanCloud.framework in Frameworks */,
@@ -182,6 +162,12 @@
 		2DFBC6EA35CC8BC7AACF438A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2EC58C911FAC4F5100EA05D0 /* HandyJSON.framework */,
+				2EA3AB001FA1B4C9001B9EDE /* ReachabilitySwift.framework */,
+				2EA3AAFC1FA05605001B9EDE /* Starscream.framework */,
+				2EA3AAFA1FA0550A001B9EDE /* SocketIO.framework */,
+				2E34C2D81F9E15F2000CC2B2 /* SwiftSocket.framework */,
+				2E34C2D61F9E10B1000CC2B2 /* Alamofire.framework */,
 				2EA24E771F932ECD00C8E829 /* EasyToast.framework */,
 				CAA5D7EC1F2886A900BC638B /* SnapKit.framework */,
 				2E1867681F26DF0C0057DBFE /* SnapKit.framework */,
@@ -189,28 +175,6 @@
 				F20A5EC22CCB137E67ADD359 /* Pods_NJSY.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2E06510E1F2184E10087592A /* serviceImpl */ = {
-			isa = PBXGroup;
-			children = (
-				2E0651161F2185D40087592A /* RoomServiceImpl.swift */,
-				2E0A862A1F30CFF8005B5540 /* CharacterServiceImpl.swift */,
-				2E0651171F2185D40087592A /* UserServiceImpl.swift */,
-				2EEC63821F32CFC50069B255 /* BattleServiceImpl.swift */,
-			);
-			name = serviceImpl;
-			sourceTree = "<group>";
-		};
-		2E06510F1F2184ED0087592A /* daoImpl */ = {
-			isa = PBXGroup;
-			children = (
-				2E0651121F2185C50087592A /* RoomDaoImpl.swift */,
-				2E0651131F2185C50087592A /* UserDaoImpl.swift */,
-				2E0448B61F21F6E600207D73 /* BattleDaoImpl.swift */,
-				2E0A86241F30AE6A005B5540 /* CharacterDaoImpl.swift */,
-			);
-			name = daoImpl;
 			sourceTree = "<group>";
 		};
 		2E6904BB1F2ECF3A008ACB6D /* SupportingFiles */ = {
@@ -223,6 +187,8 @@
 				2EA24E7A1F932F5A00C8E829 /* ResultMessage.swift */,
 				2E2F0ABD1F9336AA0019EF27 /* Model.xcdatamodeld */,
 				2E2F0AC01F9337D50019EF27 /* CoreDataImpl.swift */,
+				2EA3AAFD1FA05680001B9EDE /* SocketImpl.swift */,
+				2E704A651FAF3808009D414D /* CharacterUtil.swift */,
 			);
 			name = SupportingFiles;
 			sourceTree = "<group>";
@@ -285,39 +251,6 @@
 			name = controller;
 			sourceTree = "<group>";
 		};
-		A9257E8B1F1E4C4200F3F4C1 /* service */ = {
-			isa = PBXGroup;
-			children = (
-				2E0A862C1F30D099005B5540 /* CharacterService.swift */,
-				2E06511C1F2188F60087592A /* UserService.swift */,
-				2E06511E1F2189100087592A /* RoomService.swift */,
-				2EEC63801F32CF650069B255 /* BattleService.swift */,
-			);
-			name = service;
-			sourceTree = "<group>";
-		};
-		A9257E8C1F1E4C4E00F3F4C1 /* po */ = {
-			isa = PBXGroup;
-			children = (
-				2EBD69B51F232A4D00726771 /* BattlePO.swift */,
-				2E7694E41F20AF92007E5157 /* UserPO.swift */,
-				2E7694EB1F20B017007E5157 /* RoomPO.swift */,
-				2E0651221F21A9210087592A /* CharacterPO.swift */,
-			);
-			name = po;
-			sourceTree = "<group>";
-		};
-		A9257E8D1F1E4C6100F3F4C1 /* dao */ = {
-			isa = PBXGroup;
-			children = (
-				2E0651101F2185490087592A /* UserDao.swift */,
-				2E06511A1F2186D40087592A /* RoomDao.swift */,
-				2E0448B41F21F53000207D73 /* BattleDao.swift */,
-				2E0A86221F306693005B5540 /* CharacterDao.swift */,
-			);
-			name = dao;
-			sourceTree = "<group>";
-		};
 		A9257E8E1F1E4C6700F3F4C1 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,7 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				2E7694DD1F20AF6D007E5157 /* UserVO.swift */,
-				2E0448B01F21AD8400207D73 /* RoomVO.swift */,
+				2E0448B01F21AD8400207D73 /* Room.swift */,
 				2E0A86201F305C38005B5540 /* BattleVO.swift */,
 				2E0A86281F30CF14005B5540 /* CharacterVO.swift */,
 			);
@@ -368,13 +301,8 @@
 			isa = PBXGroup;
 			children = (
 				2E6904BB1F2ECF3A008ACB6D /* SupportingFiles */,
-				2E06510F1F2184ED0087592A /* daoImpl */,
-				A9257E8D1F1E4C6100F3F4C1 /* dao */,
-				2E06510E1F2184E10087592A /* serviceImpl */,
-				A9257E8B1F1E4C4200F3F4C1 /* service */,
 				A9257E911F1E5DE200F3F4C1 /* vo */,
 				A9257E8E1F1E4C6700F3F4C1 /* view */,
-				A9257E8C1F1E4C4E00F3F4C1 /* po */,
 				A9257E8A1F1E4C3A00F3F4C1 /* controller */,
 				A95AE6BE1F1BA6E800590E99 /* AppDelegate.swift */,
 				A95AE6CB1F1BA6E800590E99 /* Assets.xcassets */,
@@ -607,41 +535,23 @@
 			files = (
 				2EA24E7B1F932F5A00C8E829 /* ResultMessage.swift in Sources */,
 				2E52EAEA1F287A3F005E093F /* MainViewController.swift in Sources */,
-				2E06511D1F2188F60087592A /* UserService.swift in Sources */,
-				2E0448B11F21AD8400207D73 /* RoomVO.swift in Sources */,
-				2EEC63831F32CFC50069B255 /* BattleServiceImpl.swift in Sources */,
-				2EEC63811F32CF650069B255 /* BattleService.swift in Sources */,
+				2E0448B11F21AD8400207D73 /* Room.swift in Sources */,
 				2E995EF81F90DAE90078C901 /* CharacterButton.swift in Sources */,
 				2EA24E721F91EB9400C8E829 /* FromCenterSegue.swift in Sources */,
+				2EA3AAFE1FA05680001B9EDE /* SocketImpl.swift in Sources */,
 				2EA24E6C1F91BE9A00C8E829 /* ChooseCharacterController.swift in Sources */,
 				2E7F2BD81F9476F500D6ACDB /* ModeView.swift in Sources */,
-				2E0651151F2185C50087592A /* UserDaoImpl.swift in Sources */,
-				2E0A862B1F30CFF8005B5540 /* CharacterServiceImpl.swift in Sources */,
 				2E7694DE1F20AF6D007E5157 /* UserVO.swift in Sources */,
 				2EA24E791F932F1000C8E829 /* ToastExtensition.swift in Sources */,
-				2E0448B71F21F6E600207D73 /* BattleDaoImpl.swift in Sources */,
 				2EA24E751F91F24300C8E829 /* FadeAnimator.swift in Sources */,
 				2EEC63891F3AF9760069B255 /* RoomController.swift in Sources */,
-				2E0448B51F21F53000207D73 /* BattleDao.swift in Sources */,
 				2E0A86211F305C38005B5540 /* BattleVO.swift in Sources */,
-				2E06511B1F2186D40087592A /* RoomDao.swift in Sources */,
-				2E0651191F2185D40087592A /* UserServiceImpl.swift in Sources */,
-				2E0651141F2185C50087592A /* RoomDaoImpl.swift in Sources */,
-				2E0651111F2185490087592A /* UserDao.swift in Sources */,
-				2E7694EC1F20B017007E5157 /* RoomPO.swift in Sources */,
 				2EA24E6F1F91CE9A00C8E829 /* PersonView.swift in Sources */,
-				2E0A86231F306693005B5540 /* CharacterDao.swift in Sources */,
-				2E06511F1F2189100087592A /* RoomService.swift in Sources */,
 				2E2F0ABF1F9336AA0019EF27 /* Model.xcdatamodeld in Sources */,
-				2E0A86251F30AE6A005B5540 /* CharacterDaoImpl.swift in Sources */,
 				2E0A86291F30CF14005B5540 /* CharacterVO.swift in Sources */,
+				2E704A661FAF3808009D414D /* CharacterUtil.swift in Sources */,
 				2E6904C31F2EFBD0008ACB6D /* UserMainController.swift in Sources */,
-				2EBD69B61F232A4D00726771 /* BattlePO.swift in Sources */,
-				2E0651181F2185D40087592A /* RoomServiceImpl.swift in Sources */,
-				2E0A862D1F30D099005B5540 /* CharacterService.swift in Sources */,
 				2E995EF51F90A1B80078C901 /* CharacterCell.swift in Sources */,
-				2E0651231F21A9210087592A /* CharacterPO.swift in Sources */,
-				2E7694E61F20AF92007E5157 /* UserPO.swift in Sources */,
 				A95AE6BF1F1BA6E800590E99 /* AppDelegate.swift in Sources */,
 				2E2F0AC11F9337D50019EF27 /* CoreDataImpl.swift in Sources */,
 				2E6904C11F2EE9C5008ACB6D /* RoomListViewController.swift in Sources */,

@@ -1,28 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dpa-rv-Kg0">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PingFang.ttc">
+            <string>PingFangTC-Thin</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Room List View Controller-->
         <scene sceneID="fQi-za-XsM">
             <objects>
                 <viewController id="dpa-rv-Kg0" customClass="RoomListViewController" customModule="NJSY" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="06S-WQ-3e7"/>
+                        <viewControllerLayoutGuide type="bottom" id="QrS-f5-hyp"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lEb-W1-mLd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0C1-Xg-gDK">
+                                <rect key="frame" x="8" y="8" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="h2D-go-zHB"/>
+                                    <constraint firstAttribute="height" constant="32" id="mfI-RX-tu6"/>
+                                </constraints>
+                                <state key="normal" image="leftArrow"/>
+                                <connections>
+                                    <action selector="back:" destination="dpa-rv-Kg0" eventType="touchUpInside" id="DDJ-S5-MAr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0e1-k1-s5C">
+                                <rect key="frame" x="70" y="10" width="49" height="28"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Thin" family="PingFang TC" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8H-ef-igA">
+                                <rect key="frame" x="579" y="4" width="80" height="40"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Thin" family="PingFang TC" pointSize="20"/>
+                                <state key="normal" title="快速加入">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZsK-Pg-O1R">
+                                <rect key="frame" x="0.0" y="52" width="667" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="mBH-Yj-L6E"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jc-dH-2Pd">
+                                <rect key="frame" x="20" y="53" width="627" height="322"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="RLb-AK-rT5"/>
+                        <constraints>
+                            <constraint firstItem="ZsK-Pg-O1R" firstAttribute="leading" secondItem="lEb-W1-mLd" secondAttribute="leading" id="15i-AH-K8y"/>
+                            <constraint firstAttribute="trailing" secondItem="w8H-ef-igA" secondAttribute="trailing" constant="8" id="ABI-5f-EpQ"/>
+                            <constraint firstItem="ZsK-Pg-O1R" firstAttribute="top" secondItem="w8H-ef-igA" secondAttribute="bottom" constant="8" id="BPA-OM-b3b"/>
+                            <constraint firstItem="6jc-dH-2Pd" firstAttribute="leading" secondItem="lEb-W1-mLd" secondAttribute="leadingMargin" id="FKL-5A-QyQ"/>
+                            <constraint firstItem="0e1-k1-s5C" firstAttribute="leading" secondItem="0C1-Xg-gDK" secondAttribute="trailing" constant="30" id="Gcs-7E-czT"/>
+                            <constraint firstItem="0C1-Xg-gDK" firstAttribute="top" secondItem="06S-WQ-3e7" secondAttribute="bottom" constant="8" id="Gpj-1K-96C"/>
+                            <constraint firstItem="w8H-ef-igA" firstAttribute="centerY" secondItem="0e1-k1-s5C" secondAttribute="centerY" id="S5F-3p-70j"/>
+                            <constraint firstItem="0e1-k1-s5C" firstAttribute="centerY" secondItem="0C1-Xg-gDK" secondAttribute="centerY" id="SBP-gN-Lng"/>
+                            <constraint firstItem="0C1-Xg-gDK" firstAttribute="leading" secondItem="lEb-W1-mLd" secondAttribute="leading" constant="8" id="aCG-In-ApR"/>
+                            <constraint firstItem="6jc-dH-2Pd" firstAttribute="top" secondItem="ZsK-Pg-O1R" secondAttribute="bottom" id="eV0-om-EtK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6jc-dH-2Pd" secondAttribute="trailing" id="f1j-yv-DLu"/>
+                            <constraint firstItem="QrS-f5-hyp" firstAttribute="top" secondItem="6jc-dH-2Pd" secondAttribute="bottom" id="kwq-Ws-FBe"/>
+                            <constraint firstAttribute="trailing" secondItem="ZsK-Pg-O1R" secondAttribute="trailing" id="pFg-nk-RIG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="6jc-dH-2Pd" id="7CM-pK-nv9"/>
+                        <segue destination="ohh-1j-g8t" kind="show" identifier="showRoom" id="DIT-F7-V5H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEA-Lu-SRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14" y="120"/>
+            <point key="canvasLocation" x="80" y="81"/>
+        </scene>
+        <!--Room-->
+        <scene sceneID="m8X-Af-QYA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Room" id="ohh-1j-g8t" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ncb-cG-oJH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="480" y="81"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="leftArrow" width="64" height="64"/>
+    </resources>
 </document>

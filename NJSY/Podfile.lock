@@ -1,23 +1,38 @@
 PODS:
   - Alamofire (4.5.1)
   - EasyToast (2.0.2)
+  - HandyJSON (1.7.2)
   - LeanCloud (10.1.0):
     - LeanCloud/Storage (= 10.1.0)
   - LeanCloud/Storage (10.1.0):
     - Alamofire (~> 4.5)
+  - ReachabilitySwift (3)
   - SnapKit (3.2.0)
+  - Socket.IO-Client-Swift (12.1.2):
+    - Starscream (~> 2.1.1)
+  - Starscream (2.1.1)
+  - SwiftSocket (2.0.2)
 
 DEPENDENCIES:
   - EasyToast (~> 2.0.2)
-  - LeanCloud
+  - HandyJSON (~> 1.7.2)
+  - LeanCloud (~> 10.1.0)
+  - ReachabilitySwift (~> 3)
   - SnapKit (~> 3.2.0)
+  - Socket.IO-Client-Swift (~> 12.1.2)
+  - SwiftSocket
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   EasyToast: 2844de2158fe8d2313c6de81b5a858a909d82532
+  HandyJSON: e7ad0483005826baba1d1c251cd98d0aa8bd8cce
   LeanCloud: 2a6ac9da4fcf4b6b26f519d05a31998ddc59223a
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  Socket.IO-Client-Swift: ba3cb1c4bf0a6ca90080406a2c22685c25ad1f60
+  Starscream: 142bd8ef24592d985daee9fa48c936070b85b15f
+  SwiftSocket: 6f4c9c63fbc5c1d61188936bb3c599fd546f40ae
 
-PODFILE CHECKSUM: 37e686ae38937178b9961fb80b77fbd516aa8e05
+PODFILE CHECKSUM: 5c244761b8250cc5a62eff2e45d07e61bce4f92b
 
 COCOAPODS: 1.2.1

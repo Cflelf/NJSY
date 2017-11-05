@@ -8,7 +8,7 @@
 
 import UIKit
 import SnapKit
-
+import Alamofire
 class UserMainController:UIViewController,UITableViewDelegate,UITableViewDataSource{
     @IBOutlet weak var acccountLabel: UILabel!
     @IBOutlet weak var avatarButton: UIButton!
@@ -18,14 +18,14 @@ class UserMainController:UIViewController,UITableViewDelegate,UITableViewDataSou
     @IBOutlet weak var modeLabel: UILabel!
     @IBOutlet weak var rightArrowButton: UIButton!
     @IBOutlet weak var leftArrowButton: UIButton!
-    var roomService:RoomService!
+    var roomList:[Room]!
     var tableView:UITableView!
     var account:String!
     let font = "PingFangTC-Thin"
     let list = ["个人资料","游戏设置","游戏介绍","退出登录"]
     let iconList = [#imageLiteral(resourceName: "userInfo"),#imageLiteral(resourceName: "setting"),#imageLiteral(resourceName: "intro"),#imageLiteral(resourceName: "exit")]
     let modeImageList = [#imageLiteral(resourceName: "playground-default"),#imageLiteral(resourceName: "tower"),#imageLiteral(resourceName: "wende"),#imageLiteral(resourceName: "pool")]
-    let modeNameList = ["热血操场","锁妖塔","文德茶座","天鹅湖"]
+    let modeNameList = ["操场大作战","锁妖塔","文德茶座","天鹅湖"]
     var modeNum = 0
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,5 +94,25 @@ class UserMainController:UIViewController,UITableViewDelegate,UITableViewDataSou
         }
         modeButton.setImage(modeImageList[modeNum], for: .normal)
         modeLabel.text = modeNameList[modeNum]
+    }
+    @IBAction func showRoomList(_ sender: UIButton) {
+        let data = ["mode":modeNameList[modeNum]] as [String:Any]
+        Alamofire.request("http://localhost:3000/room/getRoomList",method:.post,parameters:data,encoding:JSONEncoding.default).responseJSON{
+            (response) in
+            if let json = response.result.value as? [String:Any] {
+                self.roomList = [Room].deserialize(from: json["roomList"] as? NSArray) as! [Room]
+                self.performSegue(withIdentifier: "showRoomList", sender: nil)
+            }
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showRoomList"{
+            let controller = segue.destination as! RoomListViewController
+            controller.gameMode = self.modeNameList[self.modeNum]
+            controller.account = self.account
+            controller.roomVOList = self.roomList
+        }
     }
 }

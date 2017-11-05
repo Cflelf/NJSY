@@ -10,10 +10,4 @@ class BattleVO{
     var roomId:Int!
     var characterList:[String:Int]!
     var round:Int!
-    
-    init(battlePO:BattlePO) {
-        self.roomId = battlePO.getRoomId()
-        self.characterList = battlePO.getCharacterList()
-        self.round = battlePO.getRound()
-    }
 }

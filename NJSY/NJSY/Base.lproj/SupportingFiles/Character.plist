@@ -4,6 +4,8 @@
 <dict>
 	<key>1</key>
 	<dict>
+		<key>image</key>
+		<string>pa.png</string>
 		<key>id</key>
 		<integer>1</integer>
 		<key>specialSkill</key>
@@ -19,6 +21,8 @@
 	</dict>
 	<key>0</key>
 	<dict>
+		<key>image</key>
+		<string>fw.png</string>
 		<key>id</key>
 		<integer>0</integer>
 		<key>specialSkill</key>
